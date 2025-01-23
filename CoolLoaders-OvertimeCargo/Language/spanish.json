@@ -1,0 +1,13 @@
+{
+"item" : {
+	"pizza" : {
+		"name" : "Pizza!",
+		"pickup": "Incremento de estadisticas!",
+		"description": "Incrementa <y>todas las estadisticas y sube tu nivel</c>.",
+		"destination": "Lima,\nPeru,\nTierra",
+		"date": "11/16/2056",
+		"story": "Es hora de la PIZZA! 30 años o es GRATIS! GRATIS DIJE SI GRATIS!",
+		"priority": "<r>Estándar</c>"
+		}
+	},
+}

@@ -1,0 +1,13 @@
+{
+"item" : {
+	"pizza" : {
+		"name" : "Pizza!",
+		"pickup": "All stats up!",
+		"description": "Increases <y>all stats and levels you up instantly</c>.",
+		"destination": "Lima,\nPeru,\nEarth",
+		"date": "11/16/2056",
+		"story": "It's PIZZA time! 30 years or it's FREE! FREE I SAID YES FREE!",
+		"priority": "<r>Standard</c>"
+		}
+	},
+}
