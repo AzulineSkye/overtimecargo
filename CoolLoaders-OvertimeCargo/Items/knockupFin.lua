@@ -28,7 +28,8 @@ debuffknockup:onPostStep(function(actor, stack)
 		actor.pVspeed = actor.pVspeed + 5
 		actor.fallImmunity = true
 		if actor:is_grounded() then
-			local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 304, 32, 0.3 * actor.parent:item_stack_count(fin), nil, nil, false)
+			local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 304, 32, 0.5 * actor.parent:item_stack_count(fin), nil, nil, false)
+			explosion.attack_info:set_stun(1)
 			rubble:create(actor.x, actor.y, 5)
 			gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
 			actor:screen_shake(15)
@@ -58,8 +59,9 @@ end)
 fin:clear_callbacks()
 fin:onHitProc(function(actor, victim, stack, hit_info)
 	if math.random() <= 0.1 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc) then
-		victim.parent = actor
 		if GM.actor_is_classic(victim) and not GM.actor_is_boss(victim) then
+			victim.parent = actor
+			gm.sound_play_networked(gm.constants.wMushShoot1, 1.5, 1 + math.random() * 0.5, victim.x, victim.y)
 			victim:buff_apply(debuffknockup, 600)
 		end
 	end
