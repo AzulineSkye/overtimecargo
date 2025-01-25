@@ -3,21 +3,33 @@
 	"pizza" : {
 		"name" : "Pizza!",
 		"pickup": "All stats up!",
-		"description": "Increases <y>all stats and levels you up instantly</c>.",
+		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP</c> per second.\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>\n<b>Equipment cooldown reduction</c> by <b>12% <c_stack>(+12% per stack).</c>",
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
 		"story": "It's PIZZA time! 30 years or it's FREE! FREE I SAID YES FREE!",
 		"priority": "<r>Standard</c>"
 		},
+
+	"backupMissiles" : {
+		"name" : "Backup Missiles",
+		"pickup": "Shoot 3 missiles when enemies spawn.",
+		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x50% damage</c> every time an enemy spawns.",
+		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
+		"date": "10/20/2056",
+		"story": "Don't say we sent you these, we already had enough trouble with the UES Contact Light getting them in, we don't want the authorities behind us now.",
+		"priority": "<w>Standard</c>"
+		},
+
 	"knockupFin" : {
 		"name" : "Knockup Fin",
 		"pickup": "What goes up...",
-		"description": "<y>10% chance</c> to knock enemies into the air. Afterwards, slam them into the ground for <y>50%</c> <c_stack>(+50% per stack)</c> <y>base damage, stunning.</c> nearby enemies.",
+		"description": "<y>10% chance</c> to knock enemies into the air. Afterwards, slam them into the ground for <y>30%</c> <c_stack>(+30% per stack)</c> <y>base damage.</c>",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "I'm sorry, we couldn't perform a succesful surgery, big guy couldn't handle the stress. \nHere, i remember you said you loved his fins, we are sending them back to you, it's the only part that remained untouched. \nTake Care.",
-		"priority": "<y>Standard/Biological</c>"
-		},
+		"priority": "<w>Standard/Biological</c>"
+		}
+
 	"siphoningVase" : {
 		"name" : "Siphoning Vase",
 		"pickup": "Siphon health from near enemies.",
