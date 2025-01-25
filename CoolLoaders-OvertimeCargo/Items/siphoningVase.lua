@@ -16,7 +16,7 @@ vase:onPostStep(function(actor, stack)
 	local i = 0
 	local targetenemies = List.new()
 	
-	GM.collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, true)
+	GM.collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, false)
 	
 	for _, victim in ipairs(targetenemies) do 
 		if victim.team ~= actor.team then
@@ -46,7 +46,7 @@ vase:onPostStep(function(actor, stack)
 	targetenemies:destroy()
 end)
 
-vase:onPostDraw(function(actor, stack)
+vase:onPreDraw(function(actor, stack)
 	local i = 0
 	local targetenemies = List.new()
 	
@@ -54,14 +54,17 @@ vase:onPostDraw(function(actor, stack)
 		actor:get_data().pulse = actor:get_data().pulse - 4
 	end
 	
-	GM.collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, true)
+	GM.collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, false)
 	
 	for _, victim in ipairs(targetenemies) do
 		if victim.team ~= actor.team then
 			i = i + 1
 			if i <= stack then
-				gm.draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse))
+				gm.draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse / 1.5))
 				gm.draw_line_width(actor.x, actor.y, victim.x, victim.y, 4)
+				
+				gm.draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse))
+				gm.draw_line_width(actor.x, actor.y, victim.x, victim.y, 2)
 			else
 				break
 			end
