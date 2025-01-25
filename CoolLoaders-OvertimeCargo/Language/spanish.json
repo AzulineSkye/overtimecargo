@@ -2,12 +2,42 @@
 "item" : {
 	"pizza" : {
 		"name" : "Pizza!",
-		"pickup": "Incremento de estadisticas!",
-		"description": "Incrementa <y>todas las estadisticas y sube tu nivel</c>.",
-		"destination": "Lima,\nPeru,\nTierra",
+		"pickup": "Incremento de todas las estadisticas!",
+		"description": "Incrementa las siguientes estadisticas:\n\n<g>Vida maxima</c> en <g>15% <c_stack>(+15% por item).</c>\n<g>Regeneración de vida</c> en <g>3</c> <c_stack>(+3 por item)</c> <g>de vida</c> por segundo.\n<g>Armadura</c> en <g>14 <c_stack>(+14 por item).</c>\n<y>Daño</c> en <y>15%</c> <c_stack>(+15% por item).</c>\n<y>Velocidad de ataque</c> en <y>25%</c> <c_stack>(+25% por item).</c>\n<y>Chance de critico</c> en <y>15% <c_stack>(+15% por item).</c>\n<b>Velocidad de movimiento</c> en <b>28% <c_stack>(+28% por item).</c>\n<b>Potencia de salto</c> en <b>25% <c_stack>(+25% por item).</c>\n<b>Reducción de recarga de equipamiento</c> en <b>12% <c_stack>(+12% por item).</c>",
+		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
-		"story": "Es hora de la PIZZA! 30 años o es GRATIS! GRATIS DIJE SI GRATIS!",
+		"story": "Es hora de la PIZZA! 30 años o es gratis! GRATIS DIJE SI GRATIS!",
 		"priority": "<r>Estándar</c>"
+		},
+
+	"backupMissiles" : {
+		"name" : "Misiles de Respaldo",
+		"pickup": "Dispara 3 misiles cuando enemigos aparecen.",
+		"description": "Dispara <y>3</c> <c_stack>(+1 por item) misiles pequeños por tresXcincuenta% daño</c> cada vez que un enemigo aparezca.",  
+		"destination": "Punto [REDACTED],\n[REDACTED],\n[REDACTED]",
+		"date": "10/20/2056",
+		"story": "No digas que te mandamos éstos, ya tuvimos suficientes problemas haciendo que el UES Contact Light las ponga dentro, no queremos que las autoridades nos persigan ahora.",
+		"priority": "<w>Estándar</c>"
+		},
+
+	"knockupFin" : {
+		"name" : "Aletas Abofeteadoras",
+		"pickup": "Todo lo que sube...",
+		"description": "<y>10% de probabilidad</c> de lanzar a los enemigos al aire. Despues, son azotados en el piso por <y>30%</c> <c_stack>(+30% por item)</c> <y>daño base</c> y quedan <y>aturdidos</c> por <y>0.5</c> segundos.",
+		"destination": "Jaula 255,\nCentro de Preservación,\nEl Gran Dipper",
+		"date": "10/10/2056",
+		"story": "Lo lamento, no pudimos lograr una cirugía exitosa, el gran chico no logró soportar el estrés. \nTen, recuerdo que dijiste que amabas sus aletas, te las enviaremos de vuelta, es la unica parte impecable. \nCuidate.",
+		"priority": "<w>Estándar/Biológico</c>"
+		},
+
+	"siphoningVase" : {
+		"name" : "Vasija de Sifonaje",
+		"pickup": "Drena vida de enemigos cercanos.",
+		"description": "<y>Átate</c> a <y>1</c> <c_stack>(+1 por item)</c> enemigo cercano, dañando por <y>50% de daño</c> y <g>curandote por 2.5% de tu vida maxima.",
+		"destination": "Laboratorio de Investigación Publica,\nSuecia,\nTierra",
+		"date": "10/11/2056",
+		"story": "Hey! Como va todo? Yo estoy fantástico! Nunca me había sentido tan bien en mi vida, y encontré un artefacto muy genial que podríamos investigar juntos!\nEs una vasija rara, tiene algo de alquitrán dentro, se mueve! Aunque, no puedo decir lo mismo sobre Cheryl...\nSe desmayó hace un rato, ahora mismo estoy tratándola, menos mal que el doctór nos dio éstas pociones! \nDe todas formas, cuídate y nos vemos luego!",
+		"priority": "<r>High Priority/Fragile/Biological</c>"
 		}
 	},
 }
