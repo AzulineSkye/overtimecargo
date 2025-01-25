@@ -1,4 +1,6 @@
 local sprite_fin = Resources.sprite_load(NAMESPACE, "knockupFin", path.combine(PATH, "Sprites/knockupFin.png"), 1, 16, 16)
+local eLem = Object.find("ror", "LizardF")
+local eLemG = Object.find("ror", "LizardFG")
 
 local fin = Item.new(NAMESPACE, "knockupFin")
 fin:set_sprite(sprite_fin)
@@ -24,16 +26,37 @@ debuffknockup:onPostStep(function(actor, stack)
 	local data = actor:get_data()
 	data.knockup_timer = data.knockup_timer + 1
 	
-	if data.knockup_timer > 25 or actor.pVspeed > 0 then
-		actor.pVspeed = actor.pVspeed + 5
-		actor.fallImmunity = true
-		if actor:is_grounded() then
-			local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 304, 32, 0.5 * actor.parent:item_stack_count(fin), nil, nil, false)
-			explosion.attack_info:set_stun(1)
-			rubble:create(actor.x, actor.y, 5)
-			gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
-			actor:screen_shake(15)
-			actor:buff_remove(debuffknockup)
+	if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y - 6) and GM.actor_is_classic(actor) then
+		data.knockup_timer = 25
+	end
+
+	if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) and data.knockup_timer < 24 then
+		actor.y = actor.y - 11
+	end
+
+	if data.knockup_timer > 25 then
+		if GM.actor_is_classic(actor) then
+			actor.pVspeed = actor.pVspeed + 5
+			actor.fallImmunity = true
+			if actor:is_grounded() then
+				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.3 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
+				explosion:set_stun(0.5)
+				rubble:create(actor.x, actor.y, 5)
+				gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
+				actor:screen_shake(15)
+				actor:buff_remove(debuffknockup)
+			end
+		end
+		if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) then
+			actor.y = actor.y + 25
+			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
+				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.3 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
+				explosion:set_stun(0.5)
+				rubble:create(actor.x, actor.y, 5)
+				gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
+				actor:screen_shake(15)
+				actor:buff_remove(debuffknockup)
+			end
 		end
 	end
 end)
@@ -58,11 +81,12 @@ end)
 
 fin:clear_callbacks()
 fin:onHitProc(function(actor, victim, stack, hit_info)
-	if math.random() <= 0.1 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc) then
-		if GM.actor_is_classic(victim) and not GM.actor_is_boss(victim) then
-			victim.parent = actor
-			gm.sound_play_networked(gm.constants.wMushShoot1, 1.5, 1 + math.random() * 0.5, victim.x, victim.y)
-			victim:buff_apply(debuffknockup, 600)
+	if math.random() <= 0.9 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc) then
+		victim.parent = actor
+		if GM.actor_is_classic(victim) or not GM.actor_is_boss(victim) then -- doesnt work
+			if victim.object_index ~= gm.constants.oLizardFG and victim.object_index ~= gm.constants.oLizardF then
+				victim:buff_apply(debuffknockup, 600)
+			end
 		end
 	end
 end)
