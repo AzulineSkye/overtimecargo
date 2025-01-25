@@ -81,7 +81,7 @@ end)
 
 fin:clear_callbacks()
 fin:onHitProc(function(actor, victim, stack, hit_info)
-	if math.random() <= 0.9 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc) then
+	if math.random() <= 0.1 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc) then
 		victim.parent = actor
 		if GM.actor_is_classic(victim) or not GM.actor_is_boss(victim) then -- doesnt work
 			if victim.object_index ~= gm.constants.oLizardFG and victim.object_index ~= gm.constants.oLizardF then
