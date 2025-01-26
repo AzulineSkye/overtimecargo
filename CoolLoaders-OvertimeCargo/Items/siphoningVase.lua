@@ -1,4 +1,4 @@
-local sprite_vase = Resources.sprite_load(NAMESPACE, "siphoningVase", path.combine(PATH, "Sprites/siphoningVase.png"), 1, 16, 16)
+local sprite_vase = Resources.sprite_load(NAMESPACE, "siphoningVase", path.combine(PATH, "Sprites/siphoningVase.png"), 1, 16, 17)
 
 local vase = Item.new(NAMESPACE, "siphoningVase")
 vase:set_sprite(sprite_vase)
@@ -29,7 +29,7 @@ vase:onPostStep(function(actor, stack)
 					victim:get_data().siphontick = victim:get_data().siphontick - 1
 				end
 				if victim:get_data().siphontick <= 0 then
-					local direct = actor:fire_direct(victim, 0.5, 0, victim.x, victim.y, nil, false)
+					local direct = actor:fire_direct(victim, 1, 0, victim.x, victim.y, nil, false)
 					direct.attack_info:set_color(65535)
 					actor:heal(actor.maxhp * 0.025)
 					victim:buff_apply(Buff.find("ror", "oil"), 60)

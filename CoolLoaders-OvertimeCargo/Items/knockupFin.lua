@@ -38,9 +38,9 @@ debuffknockup:onPostStep(function(actor, stack)
 		if GM.actor_is_classic(actor) then
 			actor.pVspeed = actor.pVspeed + 5
 			actor.fallImmunity = true
-			if actor:is_grounded() then
-				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.3 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
-				explosion:set_stun(0.5)
+			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
+				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
+				explosion:set_stun(0.66)
 				rubble:create(actor.x, actor.y, 5)
 				gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
 				actor:screen_shake(15)
@@ -50,8 +50,8 @@ debuffknockup:onPostStep(function(actor, stack)
 		if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) then
 			actor.y = actor.y + 25
 			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
-				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.3 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
-				explosion:set_stun(0.5)
+				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
+				explosion:set_stun(0.66)
 				rubble:create(actor.x, actor.y, 5)
 				gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
 				actor:screen_shake(15)

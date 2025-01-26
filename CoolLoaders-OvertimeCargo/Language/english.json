@@ -12,8 +12,8 @@
 
 	"backupMissiles" : {
 		"name" : "Backup Missiles",
-		"pickup": "Shoot 3 missiles when enemies spawn.",
-		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x50% damage</c> every time an enemy spawns.",
+		"pickup": "Shoot missiles when enemies spawn.",
+		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
 		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
 		"date": "10/20/2056",
 		"story": "Don't say we sent you these, we already had enough trouble with the UES Contact Light getting them in, we don't want the authorities behind us now.",
@@ -23,7 +23,7 @@
 	"knockupFin" : {
 		"name" : "Knockup Fin",
 		"pickup": "What goes up...",
-		"description": "<y>10% chance</c> to knock enemies into the air. Afterwards, slam them into the ground for <y>30%</c> <c_stack>(+30% per stack)</c> <y>base damage</c> and <y>stun</c> for <y>0.5</c> seconds.",
+		"description": "<y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>50%</c> <c_stack>(+50% per stack)</c> <y>base damage</c>.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "I'm sorry, we couldn't perform a succesful surgery, big guy couldn't handle the stress. \nHere, i remember you said you loved his fins, we are sending them back to you, it's the only part that remained untouched. \nTake Care.",
@@ -32,8 +32,8 @@
 
 	"siphoningVase" : {
 		"name" : "Siphoning Vase",
-		"pickup": "Siphon health from near enemies.",
-		"description": "<y>Tether</c> to the nearest <y>1</c> <c_stack>(+1 per stack)</c> enemies, dealing <y>50% damage</c> and <g>healing for 2.5% of your maximum health</c>.",
+		"pickup": "Siphon health from close enemies.",
+		"description": "<y>Tether</c> to the nearest <y>1</c> <c_stack>(+1 per stack)</c> enemies, dealing <y>100% damage</c> and <g>healing for 2.5% of your maximum health</c>.",
 		"destination": "Public Research Lab,\nSweden,\nEarth",
 		"date": "10/11/2056",
 		"story" : "Yo! How has it been going? I'm doing fantastic! I've never felt better in my entire life before, and I found a super cool artifact we could research together! \nIt's a weird vase, that has some tar inside, it moves! Although, can't say the same about Cheryl...\nShe passed out a bit earlier, right now I'm nursing her, thank God Doc gave us these potions! \nAnyways, take care and see you later!",

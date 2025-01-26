@@ -1,4 +1,4 @@
-local sprite_pizza = Resources.sprite_load(NAMESPACE, "Pizza", path.combine(PATH, "Sprites/pizza.png"), 1, 18, 18)
+local sprite_pizza = Resources.sprite_load(NAMESPACE, "Pizza", path.combine(PATH, "Sprites/pizza.png"), 1, 16, 16)
 
 local pizza = Item.new(NAMESPACE, "pizza")
 pizza:set_sprite(sprite_pizza)
