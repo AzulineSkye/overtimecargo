@@ -7,7 +7,7 @@
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
 		"story": "Es hora de la PIZZA! 30 años o es gratis! GRATIS DIJE SI GRATIS!",
-		"priority": "<r>Estándar</c>"
+		"priority": "<r>Alta prioridad</c>"
 		},
 
 	"backupMissiles" : {
@@ -37,7 +37,17 @@
 		"destination": "Laboratorio de Investigación Publica,\nSuecia,\nTierra",
 		"date": "10/11/2056",
 		"story": "Hey! Como va todo? Yo estoy fantástico! Nunca me había sentido tan bien en mi vida, y encontré un artefacto muy genial que podríamos investigar juntos!\nEs una vasija rara, tiene algo de alquitrán dentro, se mueve! Aunque, no puedo decir lo mismo sobre Cheryl...\nSe desmayó hace un rato, ahora mismo estoy tratándola, menos mal que el doctór nos dio éstas pociones! \nDe todas formas, cuídate y nos vemos luego!",
-		"priority": "<r>High Priority/Fragile/Biological</c>"
+		"priority": "<r>Alta prioridad/Frágil/Biológico</c>"
+		},
+
+	"amberMosquito" : {
+		"name" : "Mosquito en Ámbar",
+		"pickup" : "Reduce la vida de los enemigos",
+		"description" : "<y>Vida</c> máxima enemiga reducida en <y>25%</c> <c_stack>(+10% por item).</c>",
+		"destination" : "Museo de la Prehistoria,\nNueva Orleans,\nTierra",
+		"date" : "07/23/1993",
+		"story" : "Pero mira ésta BELLEZA! Imagina el tipo de ADN que podríamos sacar de esto! un T-Rex, o un Estegosaurio! o incluso un Triceratops! como sea, aqui tienes junto a algunos tubos de ensayo, será la colocación de la primera PIEDRA!",
+		"priority": "<r>Alta prioridad/Biológico</c>"
 		}
 	},
 }
