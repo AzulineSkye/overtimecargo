@@ -14,7 +14,7 @@
 		"name" : "Misiles de Respaldo",
 		"pickup": "Dispara 3 misiles cuando enemigos aparecen.",
 		"description": "Dispara <y>3</c> <c_stack>(+1 por item) misiles pequeños por tresXcincuenta% daño</c> cada vez que un enemigo aparezca.",  
-		"destination": "Punto [REDACTED],\n[REDACTED],\n[REDACTED]",
+		"destination": "Punto [CENSURADO],\n[CENSURADO],\n[CENSURADO]",
 		"date": "10/20/2056",
 		"story": "No digas que te mandamos éstos, ya tuvimos suficientes problemas haciendo que el UES Contact Light las ponga dentro, no queremos que las autoridades nos persigan ahora.",
 		"priority": "<w>Estándar</c>"
