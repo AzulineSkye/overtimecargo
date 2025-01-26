@@ -42,8 +42,8 @@
 
 	"amberMosquito" : {
 		"name" : "Amber Mosquito",
-		"pickup" : "Reduced enemy HP",
-		"description" : "Max enemy <y>HP</c> reduced by <y>25%</c> <c_stack>(+10% per stack).</c>",
+		"pickup" : "Reduces enemies' maximum health",
+		"description" : "Reduces enemies' <g>maximum health</c> by <g>25%</c> <c_stack>(+10% per stack)</c>.",
 		"destination" : "Museum of Prehistory,\nNew Orleans,\nEarth",
 		"date" : "07/23/1993",
 		"story" : "Now look at this BEAUTY! Imagine the kind of dinosaur DNA we could get from this! a T-Rex, or a Stegosaurus! or even a Triceratops! anyways, here you go alongside some testing tubes, this is gonna be GROUNDBREAKING!",
