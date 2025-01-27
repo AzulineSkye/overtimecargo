@@ -27,7 +27,7 @@
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "I'm sorry, we couldn't perform a succesful surgery, big guy couldn't handle the stress. \nHere, i remember you said you loved his fins, we are sending them back to you, it's the only part that remained untouched. \nTake Care.",
-		"priority": "<y>Standard/Biological</c>"
+		"priority": "<w>Standard/Biological</c>"
 		},
 
 	"siphoningVase" : {
