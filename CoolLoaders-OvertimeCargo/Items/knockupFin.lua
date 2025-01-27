@@ -39,7 +39,7 @@ debuffknockup:onPostStep(function(actor, stack)
 			actor.pVspeed = actor.pVspeed + 5
 			actor.fallImmunity = true
 			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
-				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
+				local explosion = data.applier:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * data.applier:item_stack_count(fin), nil, nil, false).attack_info
 				explosion:set_stun(0.66)
 				rubble:create(actor.x, actor.y, 5)
 				gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
@@ -50,7 +50,7 @@ debuffknockup:onPostStep(function(actor, stack)
 		if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) then
 			actor.y = actor.y + 25
 			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
-				local explosion = actor.parent:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * actor.parent:item_stack_count(fin), nil, nil, false).attack_info
+				local explosion = data.applier:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * data.applier:item_stack_count(fin), nil, nil, false).attack_info
 				explosion:set_stun(0.66)
 				rubble:create(actor.x, actor.y, 5)
 				gm.sound_play_networked(gm.constants.wGolemAttack1, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
@@ -82,7 +82,7 @@ end)
 fin:clear_callbacks()
 fin:onHitProc(function(actor, victim, stack, hit_info)
 	if math.random() <= 0.1 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc) then
-		victim.parent = actor
+		victim:get_data().applier = actor
 		if GM.actor_is_classic(victim) or not GM.actor_is_boss(victim) then -- doesnt work
 			if victim.object_index ~= gm.constants.oLizardFG and victim.object_index ~= gm.constants.oLizardF then
 				victim:buff_apply(debuffknockup, 600)

@@ -7,7 +7,7 @@
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
 		"story": "It's PIZZA time! 30 years or it's FREE! FREE I SAID YES FREE!",
-		"priority": "<r>High Priority</c>"
+		"priority": "<r>Standard</c>"
 		},
 
 	"backupMissiles" : {
@@ -17,7 +17,7 @@
 		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
 		"date": "10/20/2056",
 		"story": "Don't say we sent you these, we already had enough trouble with the UES Contact Light getting them in, we don't want the authorities behind us now.",
-		"priority": "<w>Standard</c>"
+		"priority": "<c_stack>Unmarked</c>"
 		},
 
 	"knockupFin" : {
@@ -27,7 +27,7 @@
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "I'm sorry, we couldn't perform a succesful surgery, big guy couldn't handle the stress. \nHere, i remember you said you loved his fins, we are sending them back to you, it's the only part that remained untouched. \nTake Care.",
-		"priority": "<w>Standard/Biological</c>"
+		"priority": "<y>Standard/Biological</c>"
 		},
 
 	"siphoningVase" : {
@@ -48,6 +48,16 @@
 		"date" : "07/23/1993",
 		"story" : "Now look at this BEAUTY! Imagine the kind of dinosaur DNA we could get from this! a T-Rex, or a Stegosaurus! or even a Triceratops! anyways, here you go alongside some testing tubes, this is gonna be GROUNDBREAKING!",
 		"priority": "<r>High Priority/Biological</c>"
+		},
+		
+	"moltenCandy" : {
+		"name" : "Molten Candy",
+		"pickup": "Chance on hit to fire blobs of molten candy.",
+		"description": "<y>5%</c> chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
+		"destination": "2256, \nSector 661, \nSun",
+		"date": "03/23/2000",
+		"story" : "Hey so, i'm sending you a new shipment of candy since last time they forgot to add insulation to the shipment and it all melted away.",
+		"priority": "<g>Priority</c>"
 		}
 	},
 }
