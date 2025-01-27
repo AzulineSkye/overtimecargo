@@ -13,7 +13,7 @@
 	"backupMissiles" : {
 		"name" : "Misiles de Respaldo",
 		"pickup": "Dispara 3 misiles cuando enemigos aparecen.",
-		"description": "Dispara <y>3</c> <c_stack>(+1 por item) misiles pequeños por tresXcincuenta% daño</c> cada vez que un enemigo aparezca.",  
+		"description": "Dispara <y>3</c> <c_stack>(+1 por item)</c> <y>misiles pequeños por 3x80% daño</c> cada vez que un enemigo aparezca.",  
 		"destination": "Punto [CENSURADO],\n[CENSURADO],\n[CENSURADO]",
 		"date": "10/20/2056",
 		"story": "No digas que te mandamos éstos, ya tuvimos suficientes problemas haciendo que el UES Contact Light las ponga dentro, no queremos que las autoridades nos persigan ahora.",
@@ -23,7 +23,7 @@
 	"knockupFin" : {
 		"name" : "Aletas Abofeteadoras",
 		"pickup": "Todo lo que sube...",
-		"description": "<y>10% de probabilidad</c> de lanzar a los enemigos al aire. Despues, son azotados en el piso por <y>30%</c> <c_stack>(+30% por item)</c> <y>daño base</c> y quedan <y>aturdidos</c> por <y>0.5</c> segundos.",
+		"description": "<y>10% de probabilidad</c> de lanzar a los enemigos al aire. Despues, son azotados en el piso por <y>50%</c> <c_stack>(+50% por item)</c> <y>daño base</c> y quedan <y>aturdidos.</c>",
 		"destination": "Jaula 255,\nCentro de Preservación,\nEl Gran Dipper",
 		"date": "10/10/2056",
 		"story": "Lo lamento, no pudimos lograr una cirugía exitosa, el gran chico no logró soportar el estrés. \nTen, recuerdo que dijiste que amabas sus aletas, te las enviaremos de vuelta, es la unica parte impecable. \nCuidate.",
@@ -33,7 +33,7 @@
 	"siphoningVase" : {
 		"name" : "Vasija de Sifonaje",
 		"pickup": "Drena vida de enemigos cercanos.",
-		"description": "<y>Átate</c> a <y>1</c> <c_stack>(+1 por item)</c> enemigo cercano, dañando por <y>50% de daño</c> y <g>curandote por 2.5% de tu vida maxima.",
+		"description": "<y>Átate</c> a <y>1</c> <c_stack>(+1 por item)</c> enemigo cercano, dañando por <y>100% de daño</c> y <g>curandote por 2.5% de tu vida maxima.",
 		"destination": "Laboratorio de Investigación Publica,\nSuecia,\nTierra",
 		"date": "10/11/2056",
 		"story": "Hey! Como va todo? Yo estoy fantástico! Nunca me había sentido tan bien en mi vida, y encontré un artefacto muy genial que podríamos investigar juntos!\nEs una vasija rara, tiene algo de alquitrán dentro, se mueve! Aunque, no puedo decir lo mismo sobre Cheryl...\nSe desmayó hace un rato, ahora mismo estoy tratándola, menos mal que el doctór nos dio éstas pociones! \nDe todas formas, cuídate y nos vemos luego!",
@@ -43,7 +43,7 @@
 	"amberMosquito" : {
 		"name" : "Mosquito en Ámbar",
 		"pickup" : "Reduce la vida de los enemigos",
-		"description" : "<y>Vida</c> máxima enemiga reducida en <y>25%</c> <c_stack>(+10% por item).</c>",
+		"description" : "Reduce la <y>Vida máxima</c> de los enemigos en <y>25%</c> <c_stack>(+10% por item).</c>",
 		"destination" : "Museo de la Prehistoria,\nNueva Orleans,\nTierra",
 		"date" : "07/23/1993",
 		"story" : "Pero mira ésta BELLEZA! Imagina el tipo de ADN que podríamos sacar de esto! un T-Rex, o un Estegosaurio! o incluso un Triceratops! como sea, aqui tienes junto a algunos tubos de ensayo, será la colocación de la primera PIEDRA!",
