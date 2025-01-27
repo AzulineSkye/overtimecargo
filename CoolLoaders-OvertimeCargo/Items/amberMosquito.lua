@@ -13,11 +13,11 @@ Callback.add(Callback.TYPE.onEnemyInit, "amberReduction", function(enemy)
 		if count >= 1 then
 			for i = 1, count, 1 do
 				if i == 1 then
-					enemy.maxhp = enemy.maxhp * 0.75
-					enemy.hp = enemy.maxhp
+					enemy.maxhp_base = enemy.maxhp_base * 0.75
+					enemy.hp = enemy.maxhp_base
 				else
-					enemy.maxhp = enemy.maxhp * 0.9
-					enemy.hp = enemy.maxhp
+					enemy.maxhp_base = enemy.maxhp_base * 0.9
+					enemy.hp = enemy.maxhp_base
 				end
 			end
 		end
