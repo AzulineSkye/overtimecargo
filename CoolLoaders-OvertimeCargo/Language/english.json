@@ -58,6 +58,15 @@
 		"date": "03/23/2000",
 		"story" : "Hey so, i'm sending you a new shipment of candy since last time they forgot to add insulation to the shipment and it all melted away.",
 		"priority": "<g>Priority</c>"
+		},
+	"knifeBlock" : {
+		"name" : "Knife Block",
+		"pickup": "Replace your primary skill with a wounding knife slash. Throw the knife by activating again.",
+		"description": "<b>Replace your primary skill</c> with <b>Cut</c>. <b>Throw the knife</c> by activating again.\n\nCut enemies for <y>50% damage</c>, <r>wounding</c> them.\n<r>Wounded</c> enemies take an extra <y>50% damage</c> from <b>all sources</c>.",
+		"destination": "<r>RETURN TO SENDER</c>",
+		"date": "08/16/2056",
+		"story" : "Seems like it got damaged during the delivery, and not sure how, but all but one of the knives are missing. Sending it back, hopefully I can get a replacement.",
+		"priority": "<o>Volatile</c>"
 		}
 	},
 }
