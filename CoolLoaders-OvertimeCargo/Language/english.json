@@ -73,6 +73,15 @@
 		"date": "08/16/2056",
 		"story" : "Seems like it got damaged during the delivery, and all but one of the knives were missing, not sure how that happened. Sending it back, hopefully I can get a replacement.",
 		"priority": "<or>Volatile</c>"
+		},
+	"goldDust" : {
+		"name" : "Gold Dust",
+		"pickup": "Hit enemies drop gold.",
+		"description": "Enemies drop <y>1 gold</c> on hit. Scales with time.",
+		"destination": "1st Floor,\nForging Station 33,\nAsteroid Belt",
+		"date": "09/10/2056",
+		"story" : "We're rich!",
+		"priority": "<g>Priority</c>"
 		}
 	},
 }
