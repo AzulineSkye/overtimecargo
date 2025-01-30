@@ -82,6 +82,24 @@
 		"date": "09/10/2056",
 		"story" : "We're rich!",
 		"priority": "<g>Priority</c>"
+		},
+	"specialTreatment" : {
+		"name" : "Special Treatment",
+		"pickup": "Gain barrier after falling below half health.",
+		"description": "Falling under <r>50% health</c> heals <g>50%</c> of your <g>maximum barrier</c> once per stage.",
+		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
+		"date": "09/09/2056",
+		"story" : "Hello Mr. Cleus, i've heard you've been having more patients than usual. \nSo as a way to speed up the recuperation process i've made this medicine, it has been throughly tested and i can assure you, it's a wonder. \nMake sure to send me your results back!",
+		"priority": "<w>Standard</c>"
+		},
+	"specialTreatmentConsumed" : {
+		"name" : "Empty Bottle",
+		"pickup": "Does nothing.",
+		"description": "Does nothing.",
+		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
+		"date": "09/09/2056",
+		"story" : "Hello Mr. Cleus, i've heard you've been having more patients than usual. \nSo as a way to speed up the recuperation process i've made this medicine, it has been throughly tested and i can assure you, it's a wonder. \nMake sure to send me your results back!",
+		"priority": "<w>Standard</c>"
 		}
 	},
 }

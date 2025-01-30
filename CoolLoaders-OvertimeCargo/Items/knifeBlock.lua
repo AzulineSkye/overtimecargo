@@ -6,7 +6,7 @@ local sprite_cut_icon = Resources.sprite_load(NAMESPACE, "skillCutIcon", path.co
 
 local block = Equipment.new(NAMESPACE, "knifeBlock")
 block:set_sprite(sprite_block)
-block:set_loot_tags(Item.LOOT_TAG.category_damage, Item.LOOT_TAG.equipment_blacklist_chaos)
+block:set_loot_tags(Item.LOOT_TAG.category_damage, Item.LOOT_TAG.equipment_blacklist_chaos, Item.LOOT_TAG.equipment_blacklist_activator)
 block:set_cooldown(0.5)
 
 local swipe = Object.new(NAMESPACE, "knifeBlockCutSwipe")
@@ -35,7 +35,7 @@ knife:onCreate(function(self)
 	self:get_data().trailtimer = 0
 	self:get_data().hit = 0
 	self:get_data().lifetime = 0
-	self:sound_play(gm.constants.wMercenary_Parry_StandardSlash, 1, 0.9 + math.random() * 0.1)
+	gm.sound_play_networked(gm.constants.wMercenary_Parry_StandardSlash, 1, 0.9 + math.random() * 0.1, self.x, self.y)
 end)
 
 knife:onStep(function(self)
@@ -114,7 +114,7 @@ state_cut:onEnter(function(actor, data)
 	actor:get_data().swipe = swipe:create(actor.x, actor.y)
 	actor:get_data().swipe.image_xscale = actor.image_xscale
 	actor:get_data().swipe:get_data().parent = actor
-	actor:sound_play(gm.constants.wCrit2, 1, 0.9 + math.random() * 0.1)
+	gm.sound_play_networked(gm.constants.wCrit2, 1, 0.9 + math.random() * 0.1, actor.x, actor.y)
 end)
 
 state_cut:onStep(function(actor, data)
@@ -123,7 +123,7 @@ state_cut:onStep(function(actor, data)
 	if actor:is_authority() and data.fired == 0 and actor:get_data().swipe.image_index >= 4 then
 		local damage = actor:skill_get_damage(cut)
 		
-		actor:sound_play(gm.constants.wMinerShoot1_1, 1, 0.8 + math.random() * 0.4)
+		gm.sound_play_networked(gm.constants.wMinerShoot1_1, 1, 0.8 + math.random() * 0.4, actor.x, actor.y)
 		if not GM.skill_util_update_heaven_cracker(actor, damage, actor.image_xscale) then
 			local buff_shadow_clone = Buff.find("ror", "shadowClone")
 			for i=0, actor:buff_stack_count(buff_shadow_clone) do
