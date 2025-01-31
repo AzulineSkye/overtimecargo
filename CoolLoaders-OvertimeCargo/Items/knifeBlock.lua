@@ -19,7 +19,7 @@ swipe:onDraw(function(self)
 	local parent = self:get_data().parent
 	self.x = parent.x
 	self.y = parent.y
-	self.image_speed = parent.attack_speed * 0.25
+	self.image_speed = math.min(parent.attack_speed * 0.25, 1.35)
 	if self.image_index >= 8 then
 		self:destroy()
 		return
