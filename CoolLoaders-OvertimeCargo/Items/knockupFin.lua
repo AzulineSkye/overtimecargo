@@ -40,7 +40,7 @@ debuffknockup:onPostStep(function(actor, stack)
 			actor.fallImmunity = true
 			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
 				if data.applier:exists() then
-					local explosion = data.applier:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * data.applier:item_stack_count(fin), nil, nil, false).attack_info
+					local explosion = data.applier:fire_explosion(actor.x, actor.y + 12, 152, 32, 2 * data.applier:item_stack_count(fin), nil, nil, false).attack_info
 					explosion:set_stun(0.66)
 				end
 				rubble:create(actor.x, actor.y, 5)
@@ -53,7 +53,7 @@ debuffknockup:onPostStep(function(actor, stack)
 			actor.y = actor.y + 25
 			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
 				if data.applier:exists() then
-					local explosion = data.applier:fire_explosion(actor.x, actor.y + 12, 152, 32, 0.5 * data.applier:item_stack_count(fin), nil, nil, false).attack_info
+					local explosion = data.applier:fire_explosion(actor.x, actor.y + 12, 152, 32, 2 * data.applier:item_stack_count(fin), nil, nil, false).attack_info
 					explosion:set_stun(0.66)
 				end
 				rubble:create(actor.x, actor.y, 5)

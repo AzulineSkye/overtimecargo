@@ -1,4 +1,4 @@
-local sprite_vase = Resources.sprite_load(NAMESPACE, "siphoningVase", path.combine(PATH, "Sprites/siphoningVase.png"), 1, 16, 17)
+local sprite_vase = Resources.sprite_load(NAMESPACE, "siphoningVase", path.combine(PATH, "Sprites/siphoningVase.png"), 1, 17, 17)
 
 local vase = Item.new(NAMESPACE, "siphoningVase")
 vase:set_sprite(sprite_vase)

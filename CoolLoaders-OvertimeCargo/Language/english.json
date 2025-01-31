@@ -29,7 +29,7 @@
 	"knockupFin" : {
 		"name" : "Knockup Fin",
 		"pickup": "What goes up...",
-		"description": "<y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>50%</c> <c_stack>(+50% per stack)</c> <y>base damage</c>.",
+		"description": "<y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>200%</c> <c_stack>(+200% per stack)</c> <y>base damage</c>.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "I'm sorry, we couldn't perform a succesful surgery, big guy couldn't handle the stress. \nHere, i remember you said you loved his fins, we are sending them back to you, it's the only part that remained untouched. \nTake Care.",
@@ -77,7 +77,7 @@
 	"goldDust" : {
 		"name" : "Gold Dust",
 		"pickup": "Hit enemies drop gold.",
-		"description": "Enemies drop <y>1 gold</c> on hit. Scales with time.",
+		"description": "Enemies drop <y>10¢</c> <c_stack>(+10¢ per stack)</c> <y>gold</c> on hit. Scales with time.",
 		"destination": "1st Floor,\nForging Station 33,\nAsteroid Belt",
 		"date": "09/10/2056",
 		"story" : "We're rich!",
@@ -85,8 +85,8 @@
 		},
 	"specialTreatment" : {
 		"name" : "Special Treatment",
-		"pickup": "Gain barrier after falling below half health.",
-		"description": "Falling under <r>50% health</c> heals <g>50%</c> of your <g>maximum barrier</c> once per stage.",
+		"pickup": "Gain barrier after falling to low health. Barrier gives a temporary boost of speed.",
+		"description": "Falling under <r>25% health</c> heals <g>75%</c> of your <g>maximum barrier</c> once per stage. Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
 		"story" : "Hello Mr. Cleus, i've heard you've been having more patients than usual. \nSo as a way to speed up the recuperation process i've made this medicine, it has been throughly tested and i can assure you, it's a wonder. \nMake sure to send me your results back!",
@@ -94,8 +94,8 @@
 		},
 	"specialTreatmentConsumed" : {
 		"name" : "Empty Bottle",
-		"pickup": "Does nothing.",
-		"description": "Does nothing.",
+		"pickup": "Barrier gives a temporary boost of speed.",
+		"description": "Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
 		"story" : "Hello Mr. Cleus, i've heard you've been having more patients than usual. \nSo as a way to speed up the recuperation process i've made this medicine, it has been throughly tested and i can assure you, it's a wonder. \nMake sure to send me your results back!",
