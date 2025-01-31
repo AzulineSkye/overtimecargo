@@ -20,7 +20,7 @@ pizza:onStatRecalc(function(actor, stack)
 	actor.critical_chance = actor.critical_chance + 15 * stack
 	actor.pHmax = actor.pHmax + 0.56 * stack
 	actor.pVmax = actor.pVmax + 1 * stack
-	actor.equipment_cdr = 0.12
+	--actor.equipment_cdr
 end)
 
 pizza:onPostStatRecalc(function(actor, stack)

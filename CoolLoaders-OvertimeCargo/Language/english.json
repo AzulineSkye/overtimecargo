@@ -9,7 +9,7 @@
 	"pizza" : {
 		"name" : "Pizza!",
 		"pickup": "All stats up!",
-		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP</c> per second.\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>\n<b>Equipment cooldown reduction</c> by <b>12% <c_stack>(+12% per stack).</c>",
+		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP</c> per second.\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>",
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
 		"story": "It's PIZZA time! 30 years or it's FREE! FREE I SAID YES FREE!",
