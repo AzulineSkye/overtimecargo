@@ -30,17 +30,20 @@ candybuff:onApply(function(actor, stack)
 	actor:get_data().candyTick = 0
 end)
 
+candybuff:onStatRecalc(function(actor, stack)
+	actor.pHmax = actor.pHmax * 0.4
+end)
+
 candybuff:onPostStep(function(actor, stack)
 	if gm._mod_net_isClient() then return end
 	
 	local data = actor:get_data()
 	data.candyTick = data.candyTick + 1
-	actor.pHspeed = actor.pHspeed * 0.4
 	
 	if data.candyTick >= 25 then
-		data.candyTick = 0
 		local dmg = data.applier.damage * data.applier:item_stack_count(candy)
 		actor:damage_inflict(actor, dmg, 0, data.applier, actor.x, actor.y, dmg, data.applier.team, Color.from_rgb(188, 67, 112))
+		data.candyTick = 0
 	end
 end)
 

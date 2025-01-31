@@ -40,7 +40,7 @@ treatment:onAcquire(function(actor, stack)
 end)
 
 treatment:onDamagedProc(function(actor, attacker, stack, hit_info)
-	if actor.hp < actor.maxhp * 0.25 and 0 >= actor.barrier - hit_info.damage then
+	if actor.hp < actor.maxhp * 0.249 and 0 >= actor.barrier - hit_info.damage then
 		actor:add_barrier(actor.maxbarrier * 0.75)
 		local flash = GM.instance_create(actor.x, actor.y, gm.constants.oEfFlash)
 		flash.parent = actor
