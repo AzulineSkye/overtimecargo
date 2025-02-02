@@ -1,9 +1,15 @@
 {
+"skill" : {
+	"knifeBlockCut": {
+			"name": "Cortar",
+			"description": "Corta a los enemigos por <y>50% de daño</c>, <r>hiriendolos</c> por 6 segundos.\nLos enemigos <r>heridos</c> reciben un <y>50% más de daño</c> de <b>todas las fuentes</c>."
+		},
+	},
 "item" : {
 	"pizza" : {
 		"name" : "Pizza!",
 		"pickup": "Incremento de todas las estadisticas!",
-		"description": "Incrementa las siguientes estadisticas:\n\n<g>Vida maxima</c> en <g>15% <c_stack>(+15% por item).</c>\n<g>Regeneración de vida</c> en <g>3</c> <c_stack>(+3 por item)</c> <g>de vida</c> por segundo.\n<g>Armadura</c> en <g>14 <c_stack>(+14 por item).</c>\n<y>Daño</c> en <y>15%</c> <c_stack>(+15% por item).</c>\n<y>Velocidad de ataque</c> en <y>25%</c> <c_stack>(+25% por item).</c>\n<y>Chance de critico</c> en <y>15% <c_stack>(+15% por item).</c>\n<b>Velocidad de movimiento</c> en <b>28% <c_stack>(+28% por item).</c>\n<b>Potencia de salto</c> en <b>25% <c_stack>(+25% por item).</c>\n<b>Reducción de recarga de equipamiento</c> en <b>12% <c_stack>(+12% por item).</c>",
+		"description": "Incrementa las siguientes estadisticas:\n\n<g>Vida maxima</c> en <g>15% <c_stack>(+15% por item).</c>\n<g>Regeneración de vida</c> en <g>3</c> <c_stack>(+3 por item)</c> <g>de vida</c> por segundo.\n<g>Armadura</c> en <g>14 <c_stack>(+14 por item).</c>\n<y>Daño</c> en <y>15%</c> <c_stack>(+15% por item).</c>\n<y>Velocidad de ataque</c> en <y>25%</c> <c_stack>(+25% por item).</c>\n<y>Chance de critico</c> en <y>15% <c_stack>(+15% por item).</c>\n<b>Velocidad de movimiento</c> en <b>28% <c_stack>(+28% por item).</c>\n<b>Potencia de salto</c> en <b>25% <c_stack>(+25% por item).</c>",
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
 		"story": "Es hora de la PIZZA! 30 años o es gratis! GRATIS DIJE SI GRATIS!",
@@ -16,7 +22,7 @@
 		"description": "Dispara <y>3</c> <c_stack>(+1 por item)</c> <y>misiles pequeños por 3x80% daño</c> cada vez que un enemigo aparezca.",  
 		"destination": "Punto [CENSURADO],\n[CENSURADO],\n[CENSURADO]",
 		"date": "10/20/2056",
-		"story": "No digas que te mandamos éstos, ya tuvimos suficientes problemas haciendo que el UES Contact Light las ponga dentro, no queremos que las autoridades nos persigan ahora.",
+		"story": "No digas que te mandamos estos, ya tuvimos suficientes problemas haciendo que el UES Contact Light las ponga dentro, no queremos que las autoridades nos persigan ahora.",
 		"priority": "<w>Estándar</c>"
 		},
 
@@ -27,7 +33,7 @@
 		"destination": "Jaula 255,\nCentro de Preservación,\nEl Gran Dipper",
 		"date": "10/10/2056",
 		"story": "Lo lamento, no pudimos lograr una cirugía exitosa, el gran chico no logró soportar el estrés. \nTen, recuerdo que dijiste que amabas sus aletas, te las enviaremos de vuelta, es la unica parte impecable. \nCuidate.",
-		"priority": "<w>Estándar/Biológico</c>"
+		"priority": "<y>Estándar/Biológico</c>"
 		},
 
 	"siphoningVase" : {
@@ -48,6 +54,66 @@
 		"date" : "07/23/1993",
 		"story" : "Pero mira ésta BELLEZA! Imagina el tipo de ADN que podríamos sacar de esto! un T-Rex, o un Estegosaurio! o incluso un Triceratops! como sea, aqui tienes junto a algunos tubos de ensayo, será la colocación de la primera PIEDRA!",
 		"priority": "<r>Alta prioridad/Biológico</c>"
+		},
+
+	"moltenCandy" : {
+		"name" : "Dulce Derretido",
+		"pickup": "Probabilidad al golpear de lanzar dulces derretidos.",
+		"description": "<y>5%</c> de probabilidad al golpear de lanzar <y>dulces derretidos</c>, dejando <r>charcos pegajosos</c> cuando golpean el piso que <b>ralentizan</c> y <y>queman por 100%</c> <c_stack>(+100% por item)</c> <y>de daño</c>.",
+		"destination": "2256, \nSectór 661, \nSol",
+		"date": "03/23/2000",
+		"story" : "Oye eh, te estoy enviando un nuevo cargo ya que la última vez se les olvidó añadir insulación y todo se derritió.",
+		"priority": "<g>Prioridad</c>"
+		},
+
+	"knifeBlock" : {
+		"name" : "Portacuchillos",
+		"pickup": "Reemplaza tu habilidad primaria con un corte de cuchillo hiriente. Lanza el cuchillo activandolo denuevo.",
+		"description": "<b>Reemplaza tu habilidad primaria</c> con un <y>corte de cuchillo</c> <r>hiriente</c>. <b>Lanza el cuchillo</c> al activarlo de nuevo. <b>Cuchillos arrojados</c> <r>sangran</c> a los enemigos <r>heridos</c> por <y>4x100% de daño</c>.",
+		"destination": "<r>DEVOLVER AL REMITENTE</c>",
+		"date": "08/16/2056",
+		"story" : "Al parecer fue dañado durante el envío, y todos excepto uno de los cuchillos desaparecieron, ni idea como habrá sucedido. Voy a enviarlo de vuelta, espero conseguir un reemplazo.",
+		"priority": "<or>Volátil</c>"
+		},
+
+	"goldDust" : {
+		"name" : "Polvo de Oro",
+		"pickup": "Los enemigos golpeados sueltan oro.",
+		"description": "Los enemigos golpeados sueltan <y>10¢</c> <c_stack>(+10¢ per stack)</c>. Escala con el tiempo.",
+		"destination": "1er Piso,\nEstación de Forja 33,\nCinturón de Asteroides",
+		"date": "09/10/2056",
+		"story" : "We're rich!",
+		"priority": "<g>Prioridad</c>"
+		},
+
+	"specialTreatment" : {
+		"name" : "Tratamiento Especial",
+		"pickup": "Consigue barrera en vida baja. Barrera incrementa tu velocidad de movimiento.",
+		"description": "Bajar a <r>25% de salud</c> o menos otorga <g>75%</c> de tu <g>barrera maxima</c> una vez por nivel. Incrementa <y>velocidad de movimiento</c> en un <b>25%</c> <c_stack>(+25% por item)</c> cuando tienes <g>barrera</c>.",
+		"destination": "Clinica-D,\n4to Piso,\nEstación Espacial 22-B",
+		"date": "09/09/2056",
+		"story" : "Hola Sr. Cleus, he escuchado que has tenido mas pacientes de lo usual. \nAsí que para acelerar el proceso de recuperación he creado esta medicina, ha sido probada a fondo y te puedo asegurar, es una maravilla. \nAsegúrate de mandarme tus resultados de vuelta!",
+		"priority": "<w>Estándar</c>"
+		},
+
+	"specialTreatmentConsumed" : {
+		"name" : "Botella Vacía",
+		"pickup": "Barrera incrementa tu velocidad de movimiento.",
+		"description": "Incrementa <y>velocidad de movimiento</c> en un <b>25%</c> <c_stack>(+25% por item)</c> cuando tienes <g>barrera</c>.",
+		"destination": "Clinica-D,\n4to Piso,\nEstación Espacial 22-B",
+		"date": "09/09/2056",
+		"story" : "Hola Sr. Cleus, he escuchado que has tenido mas pacientes de lo usual. \nAsí que para acelerar el proceso de recuperación he creado esta medicina, ha sido probada a fondo y te puedo asegurar, es una maravilla. \nAsegúrate de mandarme tus resultados de vuelta!",
+		"priority": "<w>Estándar</c>"
+		},
+
+	"unstableManipulator" : {
+		"name" : "Manipulador Inestable",
+		"pickup": "Mas interactuables por nivel.",
+		"description": "Incrementa los <b>creditos del director de niveles</c> en un <b>10%</c> <c_stack>(+10% por item)</c>.",
+		"destination": "??????,\n??????,\n??????",
+		"date": "??/??/????",
+		"story" : "?",
+		"priority": "<g>Prioridad</c>"
 		}
 	},
 }
