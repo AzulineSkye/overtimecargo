@@ -29,10 +29,10 @@
 	"knockupFin" : {
 		"name" : "Knockup Fin",
 		"pickup": "What goes up...",
-		"description": "<y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>200%</c> <c_stack>(+200% per stack)</c> <y>base damage</c>.",
+		"description": "Gain a <y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>200%</c> <c_stack>(+200% per stack)</c> <y>base damage</c>.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
-		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \n I remember you said you loved his fins, so we're sending back the only thing that remains in tact. \nTake Care.",
+		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you said you loved his fins, so we're sending back the only thing that remains in tact. \nTake Care.",
 		"priority": "<y>Standard/Biological</c>"
 		},
 
@@ -59,7 +59,7 @@
 	"moltenCandy" : {
 		"name" : "Molten Candy",
 		"pickup": "Chance on hit to fire blobs of molten candy.",
-		"description": "<y>5%</c> Chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
+		"description": "Gain a <y>5%</c> chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
 		"destination": "2256, \nSector 661, \nSun",
 		"date": "03/23/2000",
 		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? /nWhatever, dude. I don't get paid enough to care if people lie about their orders..",
@@ -104,7 +104,7 @@
 	"unstableManipulator" : {
 		"name" : "Unstable Manipulator",
 		"pickup": "More interactables each stage.",
-		"description": "Increase <b>director stage credits</c> by <b>10%</c> <c_stack>(+10% per stack)</c>.",
+		"description": "Increases <b>director stage credits</c> by <b>10%</c> <c_stack>(+10% per stack)</c>.",
 		"destination": "??????,\n??????,\n??????",
 		"date": "??/??/????",
 		"story" : "I th??nk i mi?ht?v? mess?d with this pl?c? t?? much.?.. What h??e i d?ne... W?s playin? ??? wo?th it?\n????????????????????????????????????????????",
