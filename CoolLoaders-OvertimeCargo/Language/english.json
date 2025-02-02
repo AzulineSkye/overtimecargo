@@ -12,7 +12,7 @@
 		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP</c> per second.\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>",
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
-		"story": "It's PIZZA time! 30 years or it's FREE! FREE I SAID YES FREE!",
+		"story": "It's PIZZA time! 30 years or it's FREE! FREE, I SAID! YES, FREE!",
 		"priority": "<r>Standard</c>"
 		},
 
@@ -22,7 +22,7 @@
 		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
 		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
 		"date": "10/20/2056",
-		"story": "Don't say we sent you these, we already had enough trouble with the UES Contact Light getting them in, we don't want the authorities behind us now.",
+		"story": "Don't let anyone know we sent you these, we already had enough trouble with the UES Contact Light getting them in. Can't afford authorities on our tail now.",
 		"priority": "<c_stack>Unmarked</c>"
 		},
 
@@ -32,7 +32,7 @@
 		"description": "<y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>200%</c> <c_stack>(+200% per stack)</c> <y>base damage</c>.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
-		"story": "I'm sorry, we couldn't perform a succesful surgery, big guy couldn't handle the stress. \nHere, i remember you said you loved his fins, we are sending them back to you, it's the only part that remained untouched. \nTake Care.",
+		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \n I remember you said you loved his fins, so we're sending back the only thing that remains in tact. \nTake Care.",
 		"priority": "<y>Standard/Biological</c>"
 		},
 
@@ -42,7 +42,7 @@
 		"description": "<y>Tether</c> to the nearest <y>1</c> <c_stack>(+1 per stack)</c> enemies, dealing <y>100% damage</c> and <g>healing for 2.5% of your maximum health</c>.",
 		"destination": "Public Research Lab,\nSweden,\nEarth",
 		"date": "10/11/2056",
-		"story" : "Yo! How has it been going? I'm doing fantastic! I've never felt better in my entire life before, and I found a super cool artifact we could research together! \nIt's a weird vase, that has some tar inside, it moves! Although, can't say the same about Cheryl...\nShe passed out a bit earlier, right now I'm nursing her, thank God Doc gave us these potions! \nAnyways, take care and see you later!",
+		"story" : "Yo, man! How's it going? Personally, I'm doing fantastic! I've never felt so good.. Although, can't say the same about Cheryl...\nShe passed out a bit earlier. I'm nursing back to health now. Thank God Doc gave us these potions! /nAnyways, I found a super cool artifact we could research together! \nIt's a weird vase, that has some tar inside, and when you shake it around, it looks like it's writhing around like some kind of animal! \nTake care man, we'll see you later!",
 		"priority": "<r>High Priority/Fragile/Biological</c>"
 		},
 
@@ -52,17 +52,17 @@
 		"description" : "Reduces enemies' <g>maximum health</c> by <g>25%</c> <c_stack>(+10% per stack)</c>.",
 		"destination" : "Museum of Prehistory,\nNew Orleans,\nEarth",
 		"date" : "07/23/1993",
-		"story" : "Now look at this BEAUTY! Imagine the kind of dinosaur DNA we could get from this! a T-Rex, or a Stegosaurus! or even a Triceratops! anyways, here you go alongside some testing tubes, this is gonna be GROUNDBREAKING!",
+		"story" : "Now look at this BEAUTY! Imagine the kind of dinosaur DNA we could extract from such a specimen! Perhaps a T-Rex, or a Stegosaurus! Or even a Triceratops! I'm entrusting your team with this. Be careful now, this discovery could be GROUNDBREAKING in the right hands!",
 		"priority": "<r>High Priority/Biological</c>"
 		},
 		
 	"moltenCandy" : {
 		"name" : "Molten Candy",
 		"pickup": "Chance on hit to fire blobs of molten candy.",
-		"description": "<y>5%</c> chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
+		"description": "<y>5%</c> Chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
 		"destination": "2256, \nSector 661, \nSun",
 		"date": "03/23/2000",
-		"story" : "Hey so, i'm sending you a new shipment of candy since last time they forgot to add insulation to the shipment and it all melted away.",
+		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? /nWhatever, dude. I don't get paid enough to care if people lie about their orders..",
 		"priority": "<g>Priority</c>"
 		},
 	"knifeBlock" : {
@@ -71,7 +71,7 @@
 		"description": "<b>Replace your primary skill</c> with a <r>wounding</c> <y>knife slash</c>. <b>Throw the knife</c> by activating again. <b>Thrown knives</c> <r>bleed wounded</c> enemies for <y>4x100% damage</c>.",
 		"destination": "<r>RETURN TO SENDER</c>",
 		"date": "08/16/2056",
-		"story" : "Seems like it got damaged during the delivery, and all but one of the knives were missing, not sure how that happened. Sending it back, hopefully I can get a replacement.",
+		"story" : "Seems like it got damaged or something during the delivery, all but one of the knives were missing. Not sure how that happened. Sending it back, hopefully I can get a replacement.",
 		"priority": "<or>Volatile</c>"
 		},
 	"goldDust" : {
@@ -89,7 +89,7 @@
 		"description": "Falling under <r>25% health</c> heals <g>75%</c> of your <g>maximum barrier</c> once per stage. Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
-		"story" : "Hello Mr. Cleus, i've heard you've been having more patients than usual. \nSo as a way to speed up the recuperation process i've made this medicine, it has been throughly tested and i can assure you, it's a wonder. \nMake sure to send me your results back!",
+		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've devloped this curative solution. We legally cannot call it medicine. I assure you, it has been throughly tested and it works a treat. \nMake sure to send any results back!",
 		"priority": "<w>Standard</c>"
 		},
 	"specialTreatmentConsumed" : {
@@ -98,7 +98,7 @@
 		"description": "Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
-		"story" : "Hello Mr. Cleus, i've heard you've been having more patients than usual. \nSo as a way to speed up the recuperation process i've made this medicine, it has been throughly tested and i can assure you, it's a wonder. \nMake sure to send me your results back!",
+		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've devloped this curative solution. We legally cannot call it medicine. I assure you, it has been throughly tested and it works a treat. \nMake sure to send any results back!",
 		"priority": "<w>Standard</c>"
 		},
 	"unstableManipulator" : {
