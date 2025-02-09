@@ -69,9 +69,9 @@
 		"name" : "Knife Block",
 		"pickup": "Replace your primary skill with a wounding knife slash. Throw the knife by activating again.",
 		"description": "<b>Replace your primary skill</c> with a <r>wounding</c> <y>knife slash</c>. <b>Throw the knife</c> by activating again. <b>Thrown knives</c> <r>bleed wounded</c> enemies for <y>4x100% damage</c>.",
-		"destination": "<r>RETURN TO SENDER</c>",
+		"destination": "<r>LOST IN TRANSIT</c>",
 		"date": "08/16/2056",
-		"story" : "Seems like it got damaged or something during the delivery, all but one of the knives were missing. Not sure how that happened. Sending it back, hopefully I can get a replacement.",
+		"story" : "We're sorry for the inconvenience, your order was lost in transit. \nOur built-in HANDYTRAK(TM) systems TRAK'd(TM) your order: 'Down to a night club 5 blocks down from our factory'. \nThey were located: 'on a dancefloor COVERED in vampire blood'.\n\nThis email was composed in part by our HANDYTRAK(TM) couriers, please let us know if they got anything wrong, and don't forget to give your courier, 'Stela' a positive rating for their hard work!",
 		"priority": "<or>Volatile</c>"
 		},
 	"goldDust" : {
@@ -109,6 +109,15 @@
 		"date": "??/??/????",
 		"story" : "I th??nk i mi?ht?v? mess?d with this pl?c? t?? much.?.. What h??e i d?ne... W?s playin? ??? wo?th it?\n????????????????????????????????????????????",
 		"priority": "<g>Priority</c>"
+		},
+	"magiciansHat" : {
+		"name" : "Magician's Hat",
+		"pickup": "Consume an item in front of you. Recieve 2 temporary copies of that item by activating again.",
+		"description": "<y>Consume</c> a commmon, <g>uncommon</c>, <r>rare</c> or <y>boss</c> item in front of you. Gain <y>2 temporary copies</c> of that item by activating again, <b>lasting 30 seconds</c>. If the hat is dropped, <r>consumed items are dropped with it</c> as <y>2 temporary copies</c>, <b>lasting 80 seconds each</c>.",
+		"destination": "Clinic-D, \n2nd Floor, \nSpace Station 22-B",
+		"date": "3/24/2056",
+		"story" : "Pretty standard stuff, right? ANY magician worth his salt knows the old 'bunny-in-the-hat' trick. But they just kept coming. They all poured out of that.. that god-forsaken hat. One after another, they all fell out like a huge, fluffy tidal wave.. But then they all just disappeared! There must've been hundreds- no, THOUSANDS of them.. And now I'm here, 'cause everyone thinks I'm CRAZY. \n\nI swear to God, if I see another rabbit, maybe I WILL go crazy..",
+		"priority": "<or>Volatile</c>"
 		}
 	},
 }

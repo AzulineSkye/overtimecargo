@@ -10,6 +10,7 @@ treatment:set_loot_tags(Item.LOOT_TAG.category_healing)
 
 local treatment_used = Item.new(NAMESPACE, "specialTreatmentConsumed", true)
 treatment_used:set_sprite(sprite_treatment_used)
+treatment_used:toggle_loot(false)
 treatment_used:set_loot_tags(Item.LOOT_TAG.item_blacklist_vendor, Item.LOOT_TAG.item_blacklist_infuser)
 treatment_used:clear_callbacks()
 

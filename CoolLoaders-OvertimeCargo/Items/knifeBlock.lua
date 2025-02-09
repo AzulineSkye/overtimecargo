@@ -6,7 +6,7 @@ local sprite_cut_icon = Resources.sprite_load(NAMESPACE, "skillCutIcon", path.co
 
 local block = Equipment.new(NAMESPACE, "knifeBlock")
 block:set_sprite(sprite_block)
-block:set_loot_tags(Item.LOOT_TAG.category_damage, Item.LOOT_TAG.equipment_blacklist_chaos, Item.LOOT_TAG.equipment_blacklist_activator)
+block:set_loot_tags(Item.LOOT_TAG.category_damage, Item.LOOT_TAG.equipment_blacklist_chaos, Item.LOOT_TAG.equipment_blacklist_activator, Item.LOOT_TAG.equipment_blacklist_enigma)
 block:set_cooldown(0.5)
 
 local swipe = Object.new(NAMESPACE, "knifeBlockCutSwipe")
