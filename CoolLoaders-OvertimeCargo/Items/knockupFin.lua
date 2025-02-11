@@ -29,7 +29,7 @@ shockwave:onCreate(function(self)
 		self.y = self.y + yy
 		if self:is_colliding(gm.constants.pBlock, self.x, self.y) then
 			self.x = self.x - xx
-			self.y = self.y - y
+			self.y = self.y - yy
 		end
 	end
 end)
@@ -169,15 +169,15 @@ gm.post_script_hook(gm.constants.actor_phy_on_landed, function(self, other, resu
 end)
 
 Callback.add(Callback.TYPE.onDamagedProc, "knockupFinExecute", function(actor, hit_info)
-	if hit_info.inflictor:item_stack_count(fin) > 0 then
-		if actor.elite_type ~= -1 and actor.hp <= actor.maxhp * ((0.13 * hit_info.inflictor:item_stack_count(fin)) / (1 + 0.13 * hit_info.inflictor:item_stack_count(fin))) then
-			actor:get_data().applier = hit_info.inflictor
-			if GM.actor_is_classic(actor) or not GM.actor_is_boss(actor) then
-				if actor.object_index ~= gm.constants.oLizardFG and actor.object_index ~= gm.constants.oLizardF then
+	if GM.actor_is_classic(actor) or not GM.actor_is_boss(actor) then
+		if actor.object_index ~= gm.constants.oLizardFG and actor.object_index ~= gm.constants.oLizardF then
+			if hit_info.inflictor:exists() and hit_info.inflictor:item_stack_count(fin) > 0 then
+				if actor.elite_type ~= -1 and actor.hp <= actor.maxhp * ((0.13 * hit_info.inflictor:item_stack_count(fin)) / (1 + 0.13 * hit_info.inflictor:item_stack_count(fin))) then
 					if actor.hp <= 0 then
 						actor.hp = 1
 						actor.dead = false
 					end
+					actor:get_data().applier = hit_info.inflictor
 					actor:buff_apply(debuffknockup, 600)
 				end
 			end
