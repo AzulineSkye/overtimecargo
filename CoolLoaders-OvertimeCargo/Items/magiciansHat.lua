@@ -106,7 +106,7 @@ hat:onUse(function(actor)
 			parstar:create(actor.x, actor.y, 2)
 		end
 		gm.sound_play_networked(gm.constants.wJackbox, 1, 0.9 + math.random() * 0.1, actor.x, actor.y)
-		gm.sound_play_networked(gm.constants.wUI_Trials_Success, 1, 0.9 + math.random() * 0.1, actor.x, actor.y
+		gm.sound_play_networked(gm.constants.wUI_Trials_Success, 1, 0.9 + math.random() * 0.1, actor.x, actor.y)
 		gm.sound_play_networked(gm.constants.wRevive, 1, 0.9 + math.random() * 0.1, actor.x, actor.y)
 	end
 	detecteditems:destroy()
