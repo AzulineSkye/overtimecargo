@@ -6,6 +6,7 @@ local fin = Item.new(NAMESPACE, "knockupFin")
 fin:set_sprite(sprite_fin)
 fin:set_tier(Item.TIER.uncommon)
 fin:set_loot_tags(Item.LOOT_TAG.category_damage)
+fin:clear_callbacks()
 
 local shockwave = Object.new(NAMESPACE, "knockupFinShockwave")
 shockwave:clear_callbacks()
@@ -81,6 +82,8 @@ end)
 debuffknockup:onPostStep(function(actor, stack)
 	if gm._mod_net_isClient() then return end
 	
+	actor:set_immune(1)
+	
 	local data = actor:get_data()
 	data.knockup_timer = data.knockup_timer + 1
 	
@@ -143,6 +146,10 @@ debuffknockup:onPostStep(function(actor, stack)
 	end
 end)
 
+debuffknockup:onRemove(function(actor, stack)
+	actor:kill()
+end)
+
 local guarded = false
 
 gm.pre_script_hook(gm.constants.actor_phy_on_landed, function(self, other, result, args)
@@ -161,14 +168,31 @@ gm.post_script_hook(gm.constants.actor_phy_on_landed, function(self, other, resu
     end
 end)
 
-fin:clear_callbacks()
-fin:onHitProc(function(actor, victim, stack, hit_info)
-	if victim.elite_type ~= -1 and victim.hp <= victim.maxhp * ((0.13 * stack) / (1 + 0.13 * stack)) then
-		victim:get_data().applier = actor
-		if GM.actor_is_classic(victim) or not GM.actor_is_boss(victim) then
-			if victim.object_index ~= gm.constants.oLizardFG and victim.object_index ~= gm.constants.oLizardF then
-				victim:buff_apply(debuffknockup, 600)
+Callback.add(Callback.TYPE.onDamagedProc, "knockupFinExecute", function(actor, hit_info)
+	if hit_info.inflictor:item_stack_count(fin) > 0 then
+		if actor.elite_type ~= -1 and actor.hp <= actor.maxhp * ((0.13 * hit_info.inflictor:item_stack_count(fin)) / (1 + 0.13 * hit_info.inflictor:item_stack_count(fin))) then
+			actor:get_data().applier = hit_info.inflictor
+			if GM.actor_is_classic(actor) or not GM.actor_is_boss(actor) then
+				if actor.object_index ~= gm.constants.oLizardFG and actor.object_index ~= gm.constants.oLizardF then
+					if actor.hp <= 0 then
+						actor.hp = 1
+						actor.dead = false
+					end
+					actor:buff_apply(debuffknockup, 600)
+				end
 			end
 		end
 	end
 end)
+
+--fin:clear_callbacks()
+--fin:onHitProc(function(actor, victim, stack, hit_info)
+--	if victim.elite_type ~= -1 and victim.hp <= victim.maxhp * ((0.13 * stack) / (1 + 0.13 * stack)) then
+--		victim:get_data().applier = actor
+--		if GM.actor_is_classic(victim) or not GM.actor_is_boss(victim) then
+--			if victim.object_index ~= gm.constants.oLizardFG and victim.object_index ~= gm.constants.oLizardF then
+--				victim:buff_apply(debuffknockup, 600)
+--			end
+--		end
+--	end
+--end)
