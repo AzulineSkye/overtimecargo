@@ -184,15 +184,3 @@ Callback.add(Callback.TYPE.onDamagedProc, "knockupFinExecute", function(actor, h
 		end
 	end
 end)
-
---fin:clear_callbacks()
---fin:onHitProc(function(actor, victim, stack, hit_info)
---	if victim.elite_type ~= -1 and victim.hp <= victim.maxhp * ((0.13 * stack) / (1 + 0.13 * stack)) then
---		victim:get_data().applier = actor
---		if GM.actor_is_classic(victim) or not GM.actor_is_boss(victim) then
---			if victim.object_index ~= gm.constants.oLizardFG and victim.object_index ~= gm.constants.oLizardF then
---				victim:buff_apply(debuffknockup, 600)
---			end
---		end
---	end
---end)
