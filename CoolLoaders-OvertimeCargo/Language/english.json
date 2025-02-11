@@ -29,11 +29,11 @@
 	"knockupFin" : {
 		"name" : "Knockup Fin",
 		"pickup": "What goes up...",
-		"description": "Gain a <y>10% chance</c> to knock enemies into the air and then slam them to the ground, <y>stunning</c> and dealing <y>200%</c> <c_stack>(+200% per stack)</c> <y>base damage</c>.",
+		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are knocked up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you said you loved his fins, so we're sending back the only thing that remains in tact. \nTake Care.",
-		"priority": "<y>Standard/Biological</c>"
+		"priority": "<g>Priority/Biological</c>"
 		},
 
 	"siphoningVase" : {

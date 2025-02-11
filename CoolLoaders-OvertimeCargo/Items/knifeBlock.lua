@@ -69,7 +69,7 @@ knife:onStep(function(self)
 						self.gravity = 0.3
 						self.direction = 90 + math.random(0, 30) * self.image_xscale
 						self.speed = math.random(5, 7)
-						local direct = self.parent:fire_direct(victim, 2, self.direction, victim.x, victim.y, gm.constants.sSparks9, false).attack_info
+						local direct = self.parent:fire_direct(victim, 2, self.direction, victim.x, victim.y, gm.constants.sEfSlash, false).attack_info
 						if victim:buff_stack_count(wound) > 0 then
 							victim:apply_dot(1, self.parent, 4, 30, Color.RED)
 							direct.knifeBlockWound = 1
@@ -127,7 +127,7 @@ state_cut:onStep(function(actor, data)
 		if not GM.skill_util_update_heaven_cracker(actor, damage, actor.image_xscale) then
 			local buff_shadow_clone = Buff.find("ror", "shadowClone")
 			for i=0, actor:buff_stack_count(buff_shadow_clone) do
-				local slash = actor:fire_explosion(actor.x + actor.image_xscale * 30, actor.y - 15, 130, 110, damage, nil, gm.constants.sSparks9).attack_info
+				local slash = actor:fire_explosion(actor.x + actor.image_xscale * 30, actor.y - 15, 130, 110, damage, nil, gm.constants.sEfSlash).attack_info
 				slash.climb = i * 8
 				slash.knifeBlockWound = 1
 			end
