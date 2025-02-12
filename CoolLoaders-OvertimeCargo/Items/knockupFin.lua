@@ -58,7 +58,7 @@ shockwave:onStep(function(self)
 		if self:attack_collision_canhit(actor) and not data.hit_list[actor.id] then
 			if gm._mod_net_isHost() then
 				local direct = self.parent:fire_direct(actor, 1, self.direction, self.x, self.y, gm.constants.sSparks11).attack_info
-				direct:set_damage(self:get_data().enemy.maxhp * ((0.13 * self.parent:item_stack_count(fin)) / (1 + 0.13 * self.parent:item_stack_count(fin))))
+				direct:set_damage(self:get_data().enemymaxhp * ((0.13 * self.parent:item_stack_count(fin)) / (1 + 0.13 * self.parent:item_stack_count(fin))))
 				direct:set_stun(1)
 			end
 			data.hit_list[actor.id] = true
@@ -96,20 +96,20 @@ debuffknockup:onPostStep(function(actor, stack)
 	end
 
 	if data.knockup_timer > 25 then
-		if GM.actor_is_classic(actor) then
+		if not GM.actor_is_boss(actor) and GM.actor_is_classic(actor) then
 			actor.pVspeed = actor.pVspeed + 5
 			actor.fallImmunity = true
 			if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y + 5) then
 				if data.applier:exists() then
 					local wave1 = shockwave:create(actor.x, actor.y + 10)
 					wave1.parent = data.applier
-					wave1:get_data().enemy = actor
+					wave1:get_data().enemymaxhp = actor.maxhp
 					wave1.team = data.applier.team
 					wave1.direction = 0
 					wave1.image_xscale = 1
 					local wave2 = shockwave:create(actor.x, actor.y + 10)
 					wave2.parent = data.applier
-					wave2:get_data().enemy = actor
+					wave2:get_data().enemymaxhp = actor.maxhp
 					wave2.team = data.applier.team
 					wave2.direction = 180
 					wave2.image_xscale = -1
@@ -170,7 +170,7 @@ end)
 
 Callback.add(Callback.TYPE.onDamagedProc, "knockupFinExecute", function(actor, hit_info)
 	local inflictor = (Instance.wrap(hit_info.inflictor))
-	if GM.actor_is_classic(actor) or not GM.actor_is_boss(actor) then
+	if GM.actor_is_classic(actor) and not GM.actor_is_boss(actor) then
 		if actor.object_index ~= gm.constants.oLizardFG and actor.object_index ~= gm.constants.oLizardF then
 			if inflictor:exists() and inflictor:item_stack_count(fin) > 0 then
 				if actor.elite_type ~= -1 and actor.hp <= actor.maxhp * ((0.13 * inflictor:item_stack_count(fin)) / (1 + 0.13 * inflictor:item_stack_count(fin))) then

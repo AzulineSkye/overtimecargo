@@ -76,8 +76,8 @@
 		},
 	"goldDust" : {
 		"name" : "Gold Dust",
-		"pickup": "Hit enemies drop gold.",
-		"description": "Enemies drop <y>10¢</c> <c_stack>(+10¢ per stack)</c> <y>gold</c> on hit. Scales with time.",
+		"pickup": "Hit enemies drop gold. Spawn temporary items based on current gold upon activating the Teleporter.",
+		"description": "Enemies drop <y>10¢</c> <c_stack>(+10¢ per stack)</c> <y>gold</c> on hit. Scales with time. Up to <y>10 temporary items</c> spawn upon activating the Teleporter, based on <y>current gold</c>.",
 		"destination": "1st Floor,\nForging Station 33,\nAsteroid Belt",
 		"date": "09/10/2056",
 		"story" : "We're rich!",
