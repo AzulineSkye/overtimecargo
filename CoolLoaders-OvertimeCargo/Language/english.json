@@ -42,7 +42,7 @@
 		"description": "<y>Tether</c> to the nearest <y>1</c> <c_stack>(+1 per stack)</c> enemies, dealing <y>100% damage</c> and <g>healing for 2.5% of your maximum health</c>.",
 		"destination": "Public Research Lab,\nSweden,\nEarth",
 		"date": "10/11/2056",
-		"story" : "Yo, man! How's it going? Personally, I'm doing fantastic! I've never felt so good.. Although, can't say the same about Cheryl...\nShe passed out a bit earlier. I'm nursing back to health now. Thank God Doc gave us these potions! /nAnyways, I found a super cool artifact we could research together! \nIt's a weird vase, that has some tar inside, and when you shake it around, it looks like it's writhing around like some kind of animal! \nTake care man, we'll see you later!",
+		"story" : "Hey man, everything good on your end? \n\nWe’re doing fine now- I myself woke up pretty good today. Cheryl, though… she’s still recovering. She’s been washed, doesn’t smell so bad anymore, and I’m nursing her as I write this to you. We were just lucky enough to have some spare elixirs on hand, so it should be steady for her… just doesn’t seem to be kicking in yet, for whatever reason. Again, my condolences, we’re all praying for her- but in other news… I found a crazy antique while the guys weren’t looking! Just looks like a crusty-ass vase at first, but there’s… something weird inside, kinda like tar. But I swear when it’s closed I can feel something moving inside, almost like it’s alive. I also had to leave it in my quarters for now because as neat as it is, it smells AWFUL. We could poke and prod at it together whenever I get back, just like old times, maybe? \n\nHope you’ll consider! See you soon, buddy.",
 		"priority": "<r>High Priority/Fragile/Biological</c>"
 		},
 
@@ -119,14 +119,14 @@
 		"story" : "Pretty standard stuff, right? ANY magician worth his salt knows the old 'bunny-in-the-hat' trick. But they just kept coming. They all poured out of that.. that god-forsaken hat. One after another, they all fell out like a huge, fluffy tidal wave.. But then they all just disappeared! There must've been hundreds- no, THOUSANDS of them.. And now I'm here, 'cause everyone thinks I'm CRAZY. \n\nI swear to God, if I see another rabbit, maybe I WILL go crazy..",
 		"priority": "<or>Volatile</c>"
 		},
-	"boungus" : {
+	"boundingFungus" : {
 		"name" : "Bounding Fungus",
-		"pickup": "Spawn a bouncy mushroom to break a long fall!"
-		"description": "If you would take fall damage, <y>spawn a bouncy mushroom</c> below you to <y>reduce your fall damage</c> by <r>x%</c>. If the fall damage to be dealt is <r>less than x%</c> of your hp, <y>block damage completely.</c>"
-		"destination": "Herbarium Centrale Italicum, Florence, Italy, Earth"
-		"date": "2/20/2056"
-		"story": "The contents of this shipment are a groundbreaking discovery in the fields of mycology, biology, and industrial manufacturing. Not only is the flesh of the cap a cost-effective, renewable and seamless replacement for rubber tree harvesting, but the coil-like structure of the stem yields the same flexibility and endurance as a titanium alloy spring-- if not stronger. Further research is needed, but as is, the capabilities and industrial benefits just from this single specie of mushroom cannot be understated... SO LONG AS IT IS <r>HANDLED WITH CARE.</c>\n\n AND YES. THAT MEANS <r>DON'T. BOUNCE. ON. THE CAP. LIKE A TRAMPOLINE.</c> I CANNOT BELIEVE I HAVE TO CLARIFY THIS. ******* OF COURSE IT WILL PERMANENTLY DAMAGE THE SAMPLE WHAT ELSE IS THERE TO EXPECT????????????????????\n\n  ...this is the last sample we were able to provide to any available export service. Out of ANY shipment you have marked as Fragile, for the love of the gods, just treat this one like your child or something. Please \n -Dr. Jumpman, Ph.D."
-		"priority": "<r>High Priority/Fragile/Biological</c>"
+		"pickup": "Spawn a bouncy mushroom to break a long fall!",
+		"description": "<y>Spawn a bouncy mushroom</c> below you to <y>reduce your fall damage</c> by <y>25%</c> <c_stack>(+25% per stack)</c>. If the fall damage to be dealt is <r>less than 10%</c> <c_stack>(+6% per stack)</c> of your hp, <y>block damage completely</c>.",
+		"destination": "Herbarium Centrale Italicum, Florence, Italy, Earth",
+		"date": "2/20/2056",
+		"story": "The contents of this shipment are a groundbreaking discovery in the fields of mycology, biology, and industrial manufacturing. Not only is the flesh of the cap a cost-effective, renewable and seamless replacement for rubber tree harvesting, but the coil-like structure of the stem yields the same flexibility and endurance as a titanium alloy spring-- if not stronger. Further research is needed, but as is, the capabilities and industrial benefits just from this single specie of mushroom cannot be understated... SO LONG AS IT IS HANDLED WITH CARE.\n\n AND YES. THAT MEANS DON'T. BOUNCE. ON. THE CAP. LIKE A TRAMPOLINE. I CANNOT BELIEVE I HAVE TO CLARIFY THIS. ******* OF COURSE IT WILL PERMANENTLY DAMAGE THE SAMPLE WHAT ELSE IS THERE TO EXPECT????????????????????\n\n  ...this is the last sample we were able to provide to any available export service. Out of ANY shipment that has been marked as 'Fragile', for the love of the gods, just treat this one like your child or something. Please \n -Dr. Jumpman, Ph.D.",
+		"priority": "<w>High Priority/Fragile</c>"
 		}
 	},
 }
