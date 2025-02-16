@@ -1,0 +1,132 @@
+{
+"skill" : {
+	"knifeBlockCut": {
+			"name": "Cut",
+			"description": "Cut enemies for <y>50% damage</c>, <r>wounding</c> them for 6 seconds.\n<r>Wounded</c> enemies take an extra <y>50% damage</c> from <b>all sources</c>."
+		},
+	},
+"item" : {
+	"pizza" : {
+		"name" : "Pizza!",
+		"pickup": "All stats up!",
+		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP</c> per second.\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>",
+		"destination": "Lima,\nPeru,\nEarth",
+		"date": "11/16/2056",
+		"story": "It's PIZZA time! 30 years or it's FREE! FREE, I SAID! YES, FREE!",
+		"priority": "<r>Standard</c>"
+		},
+
+	"backupMissiles" : {
+		"name" : "Backup Missiles",
+		"pickup": "Shoot missiles when enemies spawn.",
+		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
+		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
+		"date": "10/20/2056",
+		"story": "Don't let anyone know we sent you these, we already had enough trouble with the UES Contact Light getting them in. Can't afford authorities on our tail now.",
+		"priority": "<c_stack>Unmarked</c>"
+		},
+
+	"knockupFin" : {
+		"name" : "Knockup Fin",
+		"pickup": "What goes up...",
+		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are knocked up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
+		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
+		"date": "10/10/2056",
+		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you said you loved his fins, so we're sending back the only thing that remains in tact. \nTake Care.",
+		"priority": "<g>Priority/Biological</c>"
+		},
+
+	"siphoningVase" : {
+		"name" : "Siphoning Vase",
+		"pickup": "Siphon health from close enemies.",
+		"description": "<y>Tether</c> to the nearest <y>1</c> <c_stack>(+1 per stack)</c> enemies, dealing <y>100% damage</c> and <g>healing for 2.5% of your maximum health</c>.",
+		"destination": "Public Research Lab,\nSweden,\nEarth",
+		"date": "10/11/2056",
+		"story" : "Hey man, everything good on your end? \n\nWe’re doing fine now- I myself woke up pretty good today. Cheryl, though… she’s still recovering. She’s been washed, doesn’t smell so bad anymore, and I’m nursing her as I write this to you. We were just lucky enough to have some spare elixirs on hand, so it should be steady for her… just doesn’t seem to be kicking in yet, for whatever reason. Again, my condolences, we’re all praying for her- but in other news… I found a crazy antique while the guys weren’t looking! Just looks like a crusty-ass vase at first, but there’s… something weird inside, kinda like tar. But I swear when it’s closed I can feel something moving inside, almost like it’s alive. I also had to leave it in my quarters for now because as neat as it is, it smells AWFUL. We could poke and prod at it together whenever I get back, just like old times, maybe? \n\nHope you’ll consider! See you soon, buddy.",
+		"priority": "<r>High Priority/Fragile/Biological</c>"
+		},
+
+	"amberMosquito" : {
+		"name" : "Amber Mosquito",
+		"pickup" : "Reduces enemies' maximum health",
+		"description" : "Reduces enemies' <g>maximum health</c> by <g>25%</c> <c_stack>(+10% per stack)</c>.",
+		"destination" : "Museum of Prehistory,\nNew Orleans,\nEarth",
+		"date" : "07/23/1993",
+		"story" : "Now look at this BEAUTY! Imagine the kind of dinosaur DNA we could extract from such a specimen! Perhaps a T-Rex, or a Stegosaurus! Or even a Triceratops! I'm entrusting your team with this. Be careful now, this discovery could be GROUNDBREAKING in the right hands!",
+		"priority": "<r>High Priority/Biological</c>"
+		},
+		
+	"moltenCandy" : {
+		"name" : "Molten Candy",
+		"pickup": "Chance on hit to fire blobs of molten candy.",
+		"description": "Gain a <y>5%</c> chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
+		"destination": "2256, \nSector 661, \nSun",
+		"date": "03/23/2000",
+		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? /nWhatever, dude. I don't get paid enough to care if people lie about their orders..",
+		"priority": "<g>Priority</c>"
+		},
+	"knifeBlock" : {
+		"name" : "Knife Block",
+		"pickup": "Replace your primary skill with a wounding knife slash. Throw the knife by activating again.",
+		"description": "<b>Replace your primary skill</c> with a <r>wounding</c> <y>knife slash</c>. <b>Throw the knife</c> by activating again. <b>Thrown knives</c> <r>bleed wounded</c> enemies for <y>4x100% damage</c>.",
+		"destination": "<r>LOST IN TRANSIT</c>",
+		"date": "08/16/2056",
+		"story" : "We're sorry for the inconvenience, your order was lost in transit. \nOur built-in HANDYTRAK(TM) systems TRAK'd(TM) your order: 'Down to a night club 5 blocks down from our factory'. \nThey were located: 'on a dancefloor COVERED in vampire blood'.\n\nThis email was composed in part by our HANDYTRAK(TM) couriers, please let us know if they got anything wrong, and don't forget to give your courier, 'Stela' a positive rating for their hard work!",
+		"priority": "<or>Volatile</c>"
+		},
+	"goldDust" : {
+		"name" : "Gold Dust",
+		"pickup": "Hit enemies drop gold. Spawn temporary items based on current gold upon activating the Teleporter.",
+		"description": "Enemies drop <y>10¢</c> <c_stack>(+10¢ per stack)</c> <y>gold</c> on hit. Scales with time. Up to <y>10 temporary items</c> spawn upon activating the Teleporter, based on <y>current gold</c>.",
+		"destination": "1st Floor,\nForging Station 33,\nAsteroid Belt",
+		"date": "09/10/2056",
+		"story" : "We're rich!",
+		"priority": "<g>Priority</c>"
+		},
+	"specialTreatment" : {
+		"name" : "Special Treatment",
+		"pickup": "Gain barrier after falling to low health. Barrier gives a temporary boost of speed.",
+		"description": "Falling under <r>25% health</c> heals <g>75%</c> of your <g>maximum barrier</c> once per stage. Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
+		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
+		"date": "09/09/2056",
+		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've devloped this curative solution. We legally cannot call it medicine. I assure you, it has been throughly tested and it works a treat. \nMake sure to send any results back!",
+		"priority": "<w>Standard</c>"
+		},
+	"specialTreatmentConsumed" : {
+		"name" : "Empty Bottle",
+		"pickup": "Barrier gives a temporary boost of speed.",
+		"description": "Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
+		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
+		"date": "09/09/2056",
+		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've devloped this curative solution. We legally cannot call it medicine. I assure you, it has been throughly tested and it works a treat. \nMake sure to send any results back!",
+		"priority": "<w>Standard</c>"
+		},
+	"unstableManipulator" : {
+		"name" : "Unstable Manipulator",
+		"pickup": "More interactables each stage.",
+		"description": "Increases <b>director stage credits</c> by <b>10%</c> <c_stack>(+10% per stack)</c>.",
+		"destination": "??????,\n??????,\n??????",
+		"date": "??/??/????",
+		"story" : "I th??nk i mi?ht?v? mess?d with this pl?c? t?? much.?.. What h??e i d?ne... W?s playin? ??? wo?th it?\n????????????????????????????????????????????",
+		"priority": "<g>Priority</c>"
+		},
+	"magiciansHat" : {
+		"name" : "Magician's Hat",
+		"pickup": "Consume an item in front of you. Recieve 2 temporary copies of that item by activating again.",
+		"description": "<y>Consume</c> a commmon, <g>uncommon</c>, <r>rare</c> or <y>boss</c> item in front of you. Gain <y>2 temporary copies</c> of that item by activating again, <b>lasting 30 seconds</c>. If the hat is dropped, <r>consumed items are dropped with it</c> as <y>2 temporary copies</c>, <b>lasting 80 seconds each</c>.",
+		"destination": "Clinic-D, \n2nd Floor, \nSpace Station 22-B",
+		"date": "3/24/2056",
+		"story" : "Pretty standard stuff, right? ANY magician worth his salt knows the old 'bunny-in-the-hat' trick. But they just kept coming. They all poured out of that.. that god-forsaken hat. One after another, they all fell out like a huge, fluffy tidal wave.. But then they all just disappeared! There must've been hundreds- no, THOUSANDS of them.. And now I'm here, 'cause everyone thinks I'm CRAZY. \n\nI swear to God, if I see another rabbit, maybe I WILL go crazy..",
+		"priority": "<or>Volatile</c>"
+		},
+	"boundingFungus" : {
+		"name" : "Bounding Fungus",
+		"pickup": "Spawn a bouncy mushroom to break a long fall!",
+		"description": "<y>Spawn a bouncy mushroom</c> below you to <y>reduce your fall damage</c> by <y>25%</c> <c_stack>(+25% per stack)</c>. If the fall damage to be dealt is <r>less than 10%</c> <c_stack>(+6% per stack)</c> of your hp, <y>block damage completely</c>.",
+		"destination": "Herbarium Centrale Italicum, Florence, Italy, Earth",
+		"date": "2/20/2056",
+		"story": "The contents of this shipment are a groundbreaking discovery in the fields of mycology, biology, and industrial manufacturing. Not only is the flesh of the cap a cost-effective, renewable and seamless replacement for rubber tree harvesting, but the coil-like structure of the stem yields the same flexibility and endurance as a titanium alloy spring-- if not stronger. Further research is needed, but as is, the capabilities and industrial benefits just from this single specie of mushroom cannot be understated... SO LONG AS IT IS HANDLED WITH CARE.\n\n AND YES. THAT MEANS DON'T. BOUNCE. ON. THE CAP. LIKE A TRAMPOLINE. I CANNOT BELIEVE I HAVE TO CLARIFY THIS. ******* OF COURSE IT WILL PERMANENTLY DAMAGE THE SAMPLE WHAT ELSE IS THERE TO EXPECT????????????????????\n\n  ...this is the last sample we were able to provide to any available export service. Out of ANY shipment that has been marked as 'Fragile', for the love of the gods, just treat this one like your child or something. Please \n -Dr. Jumpman, Ph.D.",
+		"priority": "<w>High Priority/Fragile</c>"
+		}
+	},
+}

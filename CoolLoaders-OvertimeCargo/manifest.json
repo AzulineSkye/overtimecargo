@@ -1,9 +1,0 @@
-{
-	"name": "Overtime Cargo",
-	"version_number": "0.0.1",
-	"description": "Items... That these cool Loaders managed to sneak through !!",
-	"dependencies": [
-		"ReturnOfModding-ReturnOfModding-1.0.56",
-		"RoRRModdingToolkit-RoRR_Modding_Toolkit-1.2.8"
-	]
-}
