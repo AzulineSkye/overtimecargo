@@ -62,7 +62,7 @@
 		"description": "Gain a <y>5%</c> chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
 		"destination": "2256, \nSector 661, \nSun",
 		"date": "03/23/2000",
-		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? /nWhatever, dude. I don't get paid enough to care if people lie about their orders..",
+		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? \nWhatever, dude. I don't get paid enough to care if people lie about their orders..",
 		"priority": "<g>Priority</c>"
 		},
 	"knifeBlock" : {
@@ -127,6 +127,15 @@
 		"date": "2/20/2056",
 		"story": "The contents of this shipment are a groundbreaking discovery in the fields of mycology, biology, and industrial manufacturing. Not only is the flesh of the cap a cost-effective, renewable and seamless replacement for rubber tree harvesting, but the coil-like structure of the stem yields the same flexibility and endurance as a titanium alloy spring-- if not stronger. Further research is needed, but as is, the capabilities and industrial benefits just from this single specie of mushroom cannot be understated... SO LONG AS IT IS HANDLED WITH CARE.\n\n AND YES. THAT MEANS DON'T. BOUNCE. ON. THE CAP. LIKE A TRAMPOLINE. I CANNOT BELIEVE I HAVE TO CLARIFY THIS. ******* OF COURSE IT WILL PERMANENTLY DAMAGE THE SAMPLE WHAT ELSE IS THERE TO EXPECT????????????????????\n\n  ...this is the last sample we were able to provide to any available export service. Out of ANY shipment that has been marked as 'Fragile', for the love of the gods, just treat this one like your child or something. Please \n -Dr. Jumpman, Ph.D.",
 		"priority": "<w>High Priority/Fragile</c>"
+		},
+	"windupKey" : {
+		"name" : "Windup Key",
+		"pickup": "Moving charges up a burst of bullets. High damaging hits release it.",
+		"description": "<b>Moving</c> charges up <y>5</c> <c_stack>(+2.5 per stack)</c> <y>bullets</c> per second, up to <y>50</c> <c_stack>(+25 per stack)</c> <y>bullets</c>. Hits that deal <b>at least 200% damage</c> release all built up <y>bullets</c> for <y>15% damage</c> per <y>bullet</c>.",
+		"destination": "Field of Memories,\nFuturelands,\nMemento VIII",
+		"date": "03/12/2007",
+		"story": "Windup key from toy! Toy not work now, but key is cute! Sending key to random person! Spread memories!",
+		"priority": "<g>Priority</c>"
 		}
 	},
 }

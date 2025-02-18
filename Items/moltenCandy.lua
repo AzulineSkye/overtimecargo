@@ -99,29 +99,18 @@ moltenblob:onStep(function(self)
 				self:destroy()
 			end
 		else
-			local rad = math.rad(90)
-			local xx = math.cos(rad)
-			local yy = math.sin(rad)
-			local attempts = 0
-				for i = 1, 10 do
-				self.x = self.x + xx
-				self.y = self.y + yy
-				if self:is_colliding(gm.constants.pBlock, self.x, self.y) then
-					self.x = self.x - xx
-					self.y = self.y - yy
-					gm.sound_play_networked(sound_explode, 1, 1, self.x, self.y)
-					local explode = GM.instance_create(self.x, self.y, gm.constants.oEfExplosion)
-					explode.sprite_index = sprite_explode
-					data.grounded = true
-				end
-			end
+			self:move_contact_solid(270, -1)
+			gm.sound_play_networked(sound_explode, 1, 1, self.x, self.y)
+			local explode = GM.instance_create(self.x, self.y, gm.constants.oEfExplosion)
+			explode.sprite_index = sprite_explode
+			data.grounded = true
 		end
 	end
 end)
 
 candy:clear_callbacks()
 candy:onHitProc(function(actor, victim, stack, hit_info)
-	if (math.random() <= 0.05 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc)) and (#Instance.find_all(moltenblob)) < 12 then -- wont spawn if 12 puddles max already exist, another performance cope
+	if (math.random() <= 0.05 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc)) and (#Instance.find_all(moltenblob)) < 21 then -- wont spawn if 21 puddles max already exist, another performance cope
 		for i = 0, 2, 1 do
 			local blob = moltenblob:create(victim.x, victim.y)
 			blob.direction = math.random(45, 135)

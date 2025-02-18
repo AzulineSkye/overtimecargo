@@ -41,7 +41,7 @@ hat:onPostStep(function(actor)
 	local validitems = List.new()
 	actor:collision_rectangle_list(actor.x, actor.y - 25, actor.x + 200 * actor.image_xscale, actor.y + 25, gm.constants.pPickupItem, false, true, detecteditems, false)
 	for _, item in ipairs(detecteditems) do
-		if (item.tier == 0 or item.tier == 1 or item.tier == 2 or item.tier == 4) and item.speed == 0 and item.item_stack_kind == 0 then
+		if (item.tier == 0 or item.tier == 1 or item.tier == 2 or item.tier == 4) and item.speed == 0 and item.item_stack_kind == 0 and item.item_id ~= -1 then
 			if math.random(10) < 6 then
 				parselect:create(item.x + math.random(-15, 15), item.y - math.random(-15, 15))
 			end
@@ -64,7 +64,7 @@ hat:onUse(function(actor)
 	local validitems = List.new()
 	actor:collision_rectangle_list(actor.x, actor.y - 25, actor.x + 200 * actor.image_xscale, actor.y + 25, gm.constants.pPickupItem, false, true, detecteditems, false)
 	for _, item in ipairs(detecteditems) do
-		if (item.tier == 0 or item.tier == 1 or item.tier == 2 or item.tier == 4) and item.item_stack_kind == 0 then
+		if (item.tier == 0 or item.tier == 1 or item.tier == 2 or item.tier == 4) and item.item_stack_kind == 0 and item.item_id ~= -1 then
 			validitems:add(item)
 		end
 	end
