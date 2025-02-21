@@ -1,6 +1,6 @@
 local sprite_key = Resources.sprite_load(NAMESPACE, "windupKey", path.combine(PATH, "Sprites/windupKey.png"), 1, 16, 16)
 local sprite_bolts = Resources.sprite_load(NAMESPACE, "windupKeyParticles", path.combine(PATH, "Sprites/windupKeyParticles.png"), 5, 3, 3)
-local sprite_vfx = Resources.sprite_load(NAMESPACE, "windupKeyVFX", path.combine(PATH, "Sprites/windupKeyVFX.png"), 5, 10, 20)
+local sprite_vfx = Resources.sprite_load(NAMESPACE, "windupKeyVFX", path.combine(PATH, "Sprites/windupKeyVFX.png"), 8, 10, 20)
 
 local key = Item.new(NAMESPACE, "windupKey")
 key:set_sprite(sprite_key)
@@ -34,9 +34,9 @@ keyvfx:onDraw(function(self)
 	
 	if keyparent:get_data().windupkeybullets < 25 + 25 * keyparent:item_stack_count(key) then
 		if keyparent:get_data().windupkeyshooting == true then
-			self.image_speed = 0.5
+			self.image_speed = 0.9
 		elseif math.abs(keyparent.pHspeed) > 0 then
-			self.image_speed = 0.15
+			self.image_speed = 0.2
 		else
 			self.image_speed = 0
 		end
