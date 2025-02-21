@@ -131,7 +131,7 @@
 	"windupKey" : {
 		"name" : "Windup Key",
 		"pickup": "Moving charges up a burst of bullets. High damaging hits release it.",
-		"description": "<b>Moving</c> charges up <y>5</c> <c_stack>(+2.5 per stack)</c> <y>bullets</c> per second, up to <y>50</c> <c_stack>(+25 per stack)</c> <y>bullets</c>. Hits that deal <b>more than 200% damage</c> release all built up <y>bullets</c> for <y>15% damage</c> per <y>bullet</c>. <b>Bullets have a chance to activate your on-hit item effects.</c>",
+		"description": "<b>Moving</c> charges up <y>5</c> <c_stack>(+2.5 per stack)</c> <y>bullets</c> per second, up to <y>50</c> <c_stack>(+25 per stack)</c> <y>bullets</c>. Hits that deal <b>more than 200% damage</c> release all built up <y>bullets</c> for <y>10% damage</c> per <y>bullet</c>. <b>Bullets have a chance to activate your on-hit item effects.</c>",
 		"destination": "Field of Memories,\nFuturelands,\nMemento VIII",
 		"date": "03/12/2007",
 		"story": "Ah yes, Dad's old windup key! Basically worthless now, but God, the things we did with it back then.. Jeez, I remember.. maybe when you were 4 or 5? We'd spend our time with all of his windup cars and dolls and little action figures.. maybe you could ask your grandma if she knows where any of them are when you get there?",

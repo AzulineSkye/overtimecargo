@@ -100,7 +100,7 @@ key:onPostStep(function(actor, stack)
 					bolts:set_direction(0, 90, 0, 0)
 				end
 				bolts:create(actor.x, actor.y, 1, Particle.SYSTEM.below)
-				local attack = actor:fire_bullet(actor.x, actor.y, 1000, actor:skill_util_facing_direction() + math.random(-2, 2), 0.15, nil, gm.constants.sSparks3, Attack_Info.TRACER.sniper1)
+				local attack = actor:fire_bullet(actor.x, actor.y, 1000, actor:skill_util_facing_direction() + math.random(-2, 2), 0.1, nil, gm.constants.sSparks3, Attack_Info.TRACER.sniper1)
 				actor:screen_shake(1)
 			end
 		else
