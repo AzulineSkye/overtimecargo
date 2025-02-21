@@ -1,5 +1,6 @@
 local sprite_key = Resources.sprite_load(NAMESPACE, "windupKey", path.combine(PATH, "Sprites/windupKey.png"), 1, 16, 16)
 local sprite_bolts = Resources.sprite_load(NAMESPACE, "windupKeyParticles", path.combine(PATH, "Sprites/windupKeyParticles.png"), 5, 3, 3)
+local sprite_vfx = Resources.sprite_load(NAMESPACE, "windupKeyVFX", path.combine(PATH, "Sprites/windupKeyVFX.png"), 5, 10, 20)
 
 local key = Item.new(NAMESPACE, "windupKey")
 key:set_sprite(sprite_key)
@@ -15,6 +16,35 @@ bolts:set_gravity(0.2, 270)
 bolts:set_speed(5, 7, 0, 0)
 bolts:set_scale(1, 1)
 
+local keyvfx = Object.new(NAMESPACE, "windupKeyVFX")
+keyvfx:set_sprite(sprite_vfx)
+keyvfx:clear_callbacks()
+
+keyvfx:onDraw(function(self)
+	local keyparent = self:get_data().keyparent
+	
+	if keyparent:exists() == false or self:get_data().keyparent == nil then
+		self:destroy()
+	end
+	
+	self.x = keyparent.x + keyparent.pHspeed
+	self.ghost_x = keyparent.ghost_x + keyparent.pHspeed
+	self.y = keyparent.y + keyparent.pVspeed - 60
+	self.ghost_y = keyparent.ghost_y + keyparent.pVspeed - 60
+	
+	if keyparent:get_data().windupkeybullets < 25 + 25 * keyparent:item_stack_count(key) then
+		if keyparent:get_data().windupkeyshooting == true then
+			self.image_speed = 0.5
+		elseif math.abs(keyparent.pHspeed) > 0 then
+			self.image_speed = 0.15
+		else
+			self.image_speed = 0
+		end
+	else
+		self.image_speed = 0
+	end
+end)
+
 key:onAcquire(function(actor, stack)
 	if actor:get_data().windupkeytimer == nil then
 		actor:get_data().windupkeytimer = 0
@@ -29,6 +59,12 @@ end)
 
 key:onPostStep(function(actor, stack)
 	local data = actor:get_data()
+	if data.keyvfx == nil or data.keyvfx:exists() == false then
+		local instkeyvfx = keyvfx:create(actor.x, actor.y)
+		instkeyvfx:get_data().keyparent = actor
+		instkeyvfx.image_speed = 0
+		data.keyvfx = instkeyvfx
+	end
 	if data.windupkeyshooting == false then
 		if math.abs(actor.pHspeed) > 0 and data.windupkeytimer < 3 then
 			data.windupkeytimer = data.windupkeytimer + 1
@@ -45,6 +81,11 @@ key:onPostStep(function(actor, stack)
 				flash.parent = actor
 				flash.rate = 0.05
 				flash.image_alpha = 1
+				local flashkey = GM.instance_create(data.keyvfx.x, data.keyvfx.y, gm.constants.oEfFlash)
+				flashkey.parent = data.keyvfx
+				flashkey.rate = 0.05
+				flashkey.image_alpha = 1
+				data.keyvfx.image_index = 0
 			end
 		end
 	else
@@ -68,8 +109,14 @@ key:onPostStep(function(actor, stack)
 	end
 end)
 
+key:onAttackCreateProc(function(actor, stack, hit_info)
+	if hit_info:get_damage_nocrit(damage) > actor.damage * 2 then
+		hit_info.keytrigger = true
+	end
+end)
+
 key:onHitProc(function(actor, victim, stack, hit_info)
-	if hit_info.damage >= actor.damage * 2.0 then
+	if hit_info.keytrigger then
 		actor:get_data().windupkeyshooting = true
 	end
 end)
