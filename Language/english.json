@@ -22,7 +22,7 @@
 		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
 		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
 		"date": "10/20/2056",
-		"story": "Don't let anyone know we sent you these, we already had enough trouble with the UES Contact Light getting them in. Can't afford authorities on our tail now.",
+		"story": "These old pieces of junk nearly got us bloody killed! The base were saying they'd send us 'military grade' equipment.. what a bunch of cheapskates. Whole platoon got the fright of their life when the supplies drop EXPLODED mid-air. If it weren't for the fact we were all 400 yards away and well within our training grounds, we could've died! \nThese shoddy tubes of gunpowder were all we could 'salvage' from the landing. \n\nBarely.",
 		"priority": "<c_stack>Unmarked</c>"
 		},
 
@@ -32,7 +32,7 @@
 		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are knocked up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
-		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you said you loved his fins, so we're sending back the only thing that remains in tact. \nTake Care.",
+		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you saying before the surgery you loved his fins, so we'll send back what we could salvage of them. \nTake care, sir.",
 		"priority": "<g>Priority/Biological</c>"
 		},
 
@@ -52,7 +52,7 @@
 		"description" : "Reduces enemies' <g>maximum health</c> by <g>25%</c> <c_stack>(+10% per stack)</c>.",
 		"destination" : "Museum of Prehistory,\nNew Orleans,\nEarth",
 		"date" : "07/23/1993",
-		"story" : "Now look at this BEAUTY! Imagine the kind of dinosaur DNA we could extract from such a specimen! Perhaps a T-Rex, or a Stegosaurus! Or even a Triceratops! I'm entrusting your team with this. Be careful now, this discovery could be GROUNDBREAKING in the right hands!",
+		"story" : "Now look at this BEAUTY! Imagine the kinds of DNA we could extract from such a specimen! Perhaps a T-Rex, or a Stegosaurus! Or even a Triceratops! I'm entrusting your team with this. Be careful now, this discovery could be GROUNDBREAKING in the right hands!",
 		"priority": "<r>High Priority/Biological</c>"
 		},
 		
@@ -62,7 +62,7 @@
 		"description": "Gain a <y>5%</c> chance on hit to fire <y>blobs of molten candy</c>, leaving <r>sticky puddles</c> when hitting the ground that <b>slow</c> and <y>burn for 100%</c> <c_stack>(+100% per stack)</c> <y>damage</c>.",
 		"destination": "2256, \nSector 661, \nSun",
 		"date": "03/23/2000",
-		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? \nWhatever, dude. I don't get paid enough to care if people lie about their orders..",
+		"story" : "Hey, uhh.. we're going reship your candy, since according to your last message, it was 'so hot it burnt through your kitchen counter'? \nWhatever, dude. I don't get paid enough to care about people's fake complaints..",
 		"priority": "<g>Priority</c>"
 		},
 	"knifeBlock" : {
@@ -89,16 +89,16 @@
 		"description": "Falling under <r>25% health</c> heals <g>75%</c> of your <g>maximum barrier</c> once per stage. Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
-		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've devloped this curative solution. We legally cannot call it medicine. I assure you, it has been throughly tested and it works a treat. \nMake sure to send any results back!",
+		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've developed this.. curative solution. We legally cannot call it medicine. But, I assure you, it has been throughly tested and it works a TREAT. \nMake sure to send me any anomalous results!",
 		"priority": "<w>Standard</c>"
 		},
 	"specialTreatmentConsumed" : {
 		"name" : "Empty Bottle",
-		"pickup": "Barrier gives a temporary boost of speed.",
+		"pickup": "All gone!",
 		"description": "Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
-		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've devloped this curative solution. We legally cannot call it medicine. I assure you, it has been throughly tested and it works a treat. \nMake sure to send any results back!",
+		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've developed this.. curative solution. We legally cannot call it medicine. But, I assure you, it has been throughly tested and it works a TREAT. \nMake sure to send me any anomalous results!",
 		"priority": "<w>Standard</c>"
 		},
 	"unstableManipulator" : {
@@ -134,7 +134,7 @@
 		"description": "<b>Moving</c> charges up <y>5</c> <c_stack>(+2.5 per stack)</c> <y>bullets</c> per second, up to <y>50</c> <c_stack>(+25 per stack)</c> <y>bullets</c>. Hits that deal <b>at least 200% damage</c> release all built up <y>bullets</c> for <y>15% damage</c> per <y>bullet</c>.",
 		"destination": "Field of Memories,\nFuturelands,\nMemento VIII",
 		"date": "03/12/2007",
-		"story": "Windup key from toy! Toy not work now, but key is cute! Sending key to random person! Spread memories!",
+		"story": "Ah yes, Dad's old windup key! Basically worthless now, but God, the things we did with it back then.. Jeez, I remember.. maybe when you were 4 or 5? We'd spend our time with all of his windup cars and dolls and little action figures.. maybe you could ask your grandma if she knows where any of them are when you get there?",
 		"priority": "<g>Priority</c>"
 		}
 	},
