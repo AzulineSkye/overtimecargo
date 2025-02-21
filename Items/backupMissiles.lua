@@ -1,4 +1,5 @@
-local sprite = Resources.sprite_load(NAMESPACE, "Backup Missiles", path.combine(PATH, "Sprites/backupMissiles.png"), 1, 19, 19)
+local sprite = Resources.sprite_load(NAMESPACE, "backupMissiles", path.combine(PATH, "Sprites/backupMissiles.png"), 1, 16, 16)
+local missile_sprite = Resources.sprite_load(NAMESPACE, "backupMissilesMissile", path.combine(PATH, "Sprites/backupMissilesMissile.png"), 3, 23, 5)
 
 local missiles = Item.new(NAMESPACE, "backupMissiles")
 missiles:set_sprite(sprite)
@@ -40,18 +41,21 @@ missiles:onPostStep(function(actor, stack)
 					actor.missileTimer = 10
 					actor.missileCount = actor.missileCount - 1
 					local miss = smallMissile:create(actor.x, actor.y)
+					miss.sprite_index = missile_sprite
 					miss.damage = actor.damage * 0.8
 				elseif
 				actor.missileCount and actor.missileCount > 50 and actor.missileCount <= 100 then
 					actor.missileTimer = 5
 					actor.missileCount = actor.missileCount - 1
 					local miss = smallMissile:create(actor.x, actor.y)
+					miss.sprite_index = missile_sprite
 					miss.damage = actor.damage * 0.8
 				elseif
 				actor.missileCount and actor.missileCount > 100 then
 					actor.missileTimer = 1
 					actor.missileCount = actor.missileCount - 1
 					local miss = smallMissile:create(actor.x, actor.y)
+					miss.sprite_index = missile_sprite
 					miss.damage = actor.damage * 0.8
 				end
 			end
