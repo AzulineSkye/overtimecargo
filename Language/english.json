@@ -28,7 +28,7 @@
 
 	"knockupFin" : {
 		"name" : "Knockup Fin",
-		"pickup": "What goes up...",
+		"pickup": "Instantly kill low health elites, stunning and damaging nearby enemies.",
 		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are knocked up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
