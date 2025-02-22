@@ -16,7 +16,11 @@ end)
 dust:onAcquire(function(actor, stack)
 	local data = actor:get_data()
 	if data.lootbugspawned == nil then
-		data.lootbugspawned = 0
+		if Instance.find(gm.constants.oTeleporter).just_activated == 1 then
+			data.lootbugspawned = 1
+		else
+			data.lootbugspawned = 0
+		end
 	end
 end)
 
