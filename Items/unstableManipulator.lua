@@ -10,10 +10,5 @@ Callback.add(Callback.TYPE.onDirectorPopulateSpawnArrays, "unstableManipulatorCr
 	for _, player in ipairs(Instance.find_all(gm.constants.oP)) do
 		count = count + player:item_stack_count(manip)
 	end
-	--print("og credits", GM._mod_game_getDirector().pos_points)
-	--print("final mult", math.max(1 + ((math.sqrt(count) - 0.5) / 5), 1))
-	--print("increase mult", (math.sqrt(count) - 0.5) / 5)
-	--print("final credits prediction", GM._mod_game_getDirector().pos_points * math.max(1 + ((math.sqrt(count) - 0.5) / 5), 1))
-	GM._mod_game_getDirector().pos_points = GM._mod_game_getDirector().pos_points * math.max(1 + ((math.sqrt(count) - 0.5) / 5), 1)
-	--print("final credits", GM._mod_game_getDirector().pos_points)
+	GM._mod_game_getDirector().pos_points = GM._mod_game_getDirector().pos_points * math.max(1 + ((math.sqrt(count) - 0.5) / 3), 1)
 end)
