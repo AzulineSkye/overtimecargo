@@ -43,6 +43,14 @@ end)
 boungus:onPostStep(function(actor, stack)
 	if actor:get_data().boungustimer <= 60 * (15 * 0.9 ^ (stack - 1)) then
 		actor:get_data().boungustimer = actor:get_data().boungustimer + 1
+	elseif actor:get_data().boungusrechargeeffects == false then
+		gm.sound_play_networked(gm.constants.wEfMushroom, 1, 1.2 + math.random() * 0.4, actor.x, actor.y)
+		local flash = GM.instance_create(actor.x, actor.y, gm.constants.oEfFlash)
+		flash.parent = actor
+		flash.rate = 0.05
+		flash.image_blend = 8894686
+		flash.image_alpha = 1
+		actor:get_data().boungusrechargeeffects = true
 	end
 end)
 
@@ -53,6 +61,7 @@ gm.pre_script_hook(gm.constants.actor_phy_on_landed, function(self, other, resul
 		boinged = true
 		real_self:get_data().boungustimer = 0
 		real_self:get_data().shroomjumped = nil
+		real_self:get_data().boungusrechargeeffects = false
 		local shroom = boing:create(real_self.x, real_self.y + 12)
 		shroom.parent = real_self
     end
