@@ -33,22 +33,31 @@ lootbug:onCreate(function(actor)
 	actor.sound_hit = gm.constants.wImpHit
 	actor.sound_death = sound_death
 
-	actor:enemy_stats_init(0, 400, 99999, 0)
+	actor:enemy_stats_init(0, 300, 99999, 0)
 	actor.pHmax_base = 2.6
 
 	actor:init_actor_late()
-	actor.lifetime = 8 * 60
+	actor.lifetime = 20 * 60
 	actor.burrowing = 0
+	actor.madesound = actor.lifetime
 end)
 
 lootbug:onStep(function(actor)
 	actor:buff_apply(Buff.find("ror", "fear"), 99999)
-	print(actor.lifetime)
 	if actor.lifetime > 0 then
 		actor.lifetime = actor.lifetime - 1
 	else
 		actor.sprite_index = sprite_burrow
 		actor.burrowing = 1
+	end
+	
+	if actor.madesound - actor.lifetime > 120 and math.random() <= 0.05 then
+		if math.random() <= 0.5 then
+			gm.sound_play_networked(sound_idle1, 1, 1, actor.x, actor.y)
+		else
+			gm.sound_play_networked(sound_idle2, 1, 1, actor.x, actor.y)
+		end
+		actor.madesound = actor.lifetime
 	end
 	
 	if actor.burrowing == 1 then
