@@ -48,7 +48,7 @@ end)
 
 gm.pre_script_hook(gm.constants.actor_phy_on_landed, function(self, other, result, args)
     local real_self = Instance.wrap(self)
-    if not gm.bool(self.invincible) and real_self:item_stack_count(boungus) > 0 and real_self:get_data().boungustimer >= 60 * (15 * 0.9 ^ (real_self:item_stack_count(boungus) - 1)) and self.pVspeed > 25 then
+    if not gm.bool(self.invincible) and real_self:item_stack_count(boungus) > 0 and real_self:get_data().boungustimer >= 60 * (15 * 0.8 ^ (real_self:item_stack_count(boungus) - 1)) and self.pVspeed > 25 then
 		self.invincible = 1
 		boinged = true
 		real_self:get_data().boungustimer = 0
