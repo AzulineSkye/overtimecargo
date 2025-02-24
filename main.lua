@@ -1,3 +1,6 @@
+--Overtime Cargo
+--CoolLoadersInc
+
 mods["RoRRModdingToolkit-RoRR_Modding_Toolkit"].auto(true)
 
 PATH = _ENV["!plugins_mod_folder_path"]

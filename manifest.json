@@ -2,10 +2,10 @@
 	"name": "Overtime Cargo",
 	"version_number": "0.0.1",
 	"website_url": "https://github.com/AzulineSkye/overtimecargo",
-	"description": "Items... That these cool Loaders managed to sneak through !!",
+	"description": "An item mod loosely based on ROR1's After Hours Cargo.",
 	"dependencies": [
 		"ReturnOfModding-ReturnOfModding-1.0.56",
-		"RoRRModdingToolkit-RoRR_Modding_Toolkit-1.2.8"
+		"RoRRModdingToolkit-RoRR_Modding_Toolkit-1.2.8",
 		"MGReturns-ENVY-1.1.1"
 	]
 }
