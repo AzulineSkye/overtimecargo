@@ -19,19 +19,7 @@ shockwave:onCreate(function(self)
 	self.parent = self:get_data().parent
 	self:get_data().hit_list = {}
 	self:get_data().lifetime = 50
-	
-	local rad = math.rad(90)
-	local xx = math.cos(rad)
-	local yy = math.sin(rad)
-	local attempts = 0
-	for i = 1, 10 do
-		self.x = self.x + xx
-		self.y = self.y + yy
-		if self:is_colliding(gm.constants.pBlock, self.x, self.y) then
-			self.x = self.x - xx
-			self.y = self.y - yy
-		end
-	end
+	self:move_contact_solid(270, -1)
 end)
 shockwave:onStep(function(self)
 	if not Instance.exists(self.parent) then

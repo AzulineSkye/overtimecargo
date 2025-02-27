@@ -29,7 +29,7 @@
 	"spikingFin" : {
 		"name" : "Spiking Fin",
 		"pickup": "Instantly kill low health elites, stunning and damaging nearby enemies.",
-		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are knocked up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
+		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are sent up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
 		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
 		"date": "10/10/2056",
 		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you saying before the surgery you loved his fins, so we'll send back what we could salvage of them. \nTake care, sir.",

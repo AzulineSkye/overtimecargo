@@ -1,7 +1,7 @@
-local sprite = Resources.sprite_load(NAMESPACE, "backupMissiles", path.combine(PATH, "Sprites/backupMissiles.png"), 1, 16, 16)
-local missile_sprite = Resources.sprite_load(NAMESPACE, "backupMissilesMissile", path.combine(PATH, "Sprites/backupMissilesMissile.png"), 3, 23, 5)
+local sprite = Resources.sprite_load(NAMESPACE, "scrapMissiles", path.combine(PATH, "Sprites/scrapMissiles.png"), 1, 16, 16)
+local missile_sprite = Resources.sprite_load(NAMESPACE, "scrapMissilesMissile", path.combine(PATH, "Sprites/scrapMissilesMissile.png"), 3, 23, 5)
 
-local missiles = Item.new(NAMESPACE, "backupMissiles")
+local missiles = Item.new(NAMESPACE, "scrapMissiles")
 missiles:set_sprite(sprite)
 missiles:set_tier(Item.TIER.common)
 missiles:set_loot_tags(Item.LOOT_TAG.category_damage)
@@ -63,13 +63,12 @@ missiles:onPostStep(function(actor, stack)
 	end
 end)
 
-Callback.add(Callback.TYPE.onEnemyInit, "backupShots", function(enemy)
+Callback.add(Callback.TYPE.onEnemyInit, "scrapMissilesLaunch", function(enemy)
 	for id, _ in pairs(my_item_owners) do
 		local actor = Instance.wrap(id)
 		if actor:exists() then
 			actor.missileCount = actor.missileCount + 2 + 1 * actor:item_stack_count(missiles)
 		else
-			-- clean up any that don't exist anymore.
 			my_item_owners[id] = nil
 		end
 	end
