@@ -16,7 +16,7 @@
 		"priority": "<r>Standard</c>"
 		},
 
-	"backupMissiles" : {
+	"scrapMissiles" : {
 		"name" : "Scrap Missiles",
 		"pickup": "Shoot missiles when enemies spawn.",
 		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
