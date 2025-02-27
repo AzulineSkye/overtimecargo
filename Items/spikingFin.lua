@@ -1,14 +1,14 @@
-local sprite_fin = Resources.sprite_load(NAMESPACE, "knockupFin", path.combine(PATH, "Sprites/knockupFin.png"), 1, 16, 16)
+local sprite_fin = Resources.sprite_load(NAMESPACE, "spikingFin", path.combine(PATH, "Sprites/spikingFin.png"), 1, 16, 16)
 local eLem = Object.find("ror", "LizardF")
 local eLemG = Object.find("ror", "LizardFG")
 
-local fin = Item.new(NAMESPACE, "knockupFin")
+local fin = Item.new(NAMESPACE, "spikingFin")
 fin:set_sprite(sprite_fin)
 fin:set_tier(Item.TIER.uncommon)
 fin:set_loot_tags(Item.LOOT_TAG.category_damage)
 fin:clear_callbacks()
 
-local shockwave = Object.new(NAMESPACE, "knockupFinShockwave")
+local shockwave = Object.new(NAMESPACE, "spikingFinShockwave")
 shockwave:clear_callbacks()
 shockwave.obj_sprite = gm.constants.sSparks4
 
@@ -66,36 +66,36 @@ shockwave:onStep(function(self)
 	end
 end)
 
-local debuffknockup = Buff.new(NAMESPACE, "debuffknockup")
-debuffknockup.show_icon = false
-debuffknockup.is_debuff = true
-debuffknockup.max_stack = 1
+local debuffspiking = Buff.new(NAMESPACE, "debuffspiking")
+debuffspiking.show_icon = false
+debuffspiking.is_debuff = true
+debuffspiking.max_stack = 1
 
 local rubble = Particle.find("ror", "Rubble1")
 
-debuffknockup:clear_callbacks()
-debuffknockup:onApply(function(actor, stack)
-	actor:get_data().knockup_timer = 0
+debuffspiking:clear_callbacks()
+debuffspiking:onApply(function(actor, stack)
+	actor:get_data().spiking_timer = 0
 	actor.pVspeed = -14
 end)
 
-debuffknockup:onPostStep(function(actor, stack)
+debuffspiking:onPostStep(function(actor, stack)
 	if gm._mod_net_isClient() then return end
 	
 	actor:set_immune(1)
 	
 	local data = actor:get_data()
-	data.knockup_timer = data.knockup_timer + 1
+	data.spiking_timer = data.spiking_timer + 1
 	
 	if actor:is_colliding(gm.constants.pBlock, actor.x, actor.y - 6) and GM.actor_is_classic(actor) then
-		data.knockup_timer = 25
+		data.spiking_timer = 25
 	end
 
-	if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) and data.knockup_timer < 24 then
+	if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) and data.spiking_timer < 24 then
 		actor.y = actor.y - 11
 	end
 
-	if data.knockup_timer > 25 then
+	if data.spiking_timer > 25 then
 		if not GM.actor_is_boss(actor) and GM.actor_is_classic(actor) then
 			actor.pVspeed = actor.pVspeed + 5
 			actor.fallImmunity = true
@@ -118,7 +118,7 @@ debuffknockup:onPostStep(function(actor, stack)
 				gm.sound_play_networked(gm.constants.wGolemAttack1, 0.8, 0.8 + math.random() * 0.2, actor.x, actor.y)
 				gm.sound_play_networked(gm.constants.wLizardF_FlyingAttackStart, 0.8, 0.8 + math.random() * 0.2, actor.x, actor.y)
 				actor:screen_shake(15)
-				actor:buff_remove(debuffknockup)
+				actor:buff_remove(debuffspiking)
 			end
 		end
 		if not GM.actor_is_boss(actor) and not GM.actor_is_classic(actor) then
@@ -140,13 +140,13 @@ debuffknockup:onPostStep(function(actor, stack)
 				gm.sound_play_networked(gm.constants.wGolemAttack1, 0.8, 0.8 + math.random() * 0.2, actor.x, actor.y)
 				gm.sound_play_networked(gm.constants.wLizardF_FlyingAttackStart, 0.8, 0.8 + math.random() * 0.2, actor.x, actor.y)
 				actor:screen_shake(15)
-				actor:buff_remove(debuffknockup)
+				actor:buff_remove(debuffspiking)
 			end
 		end
 	end
 end)
 
-debuffknockup:onRemove(function(actor, stack)
+debuffspiking:onRemove(function(actor, stack)
 	actor:kill()
 end)
 
@@ -168,7 +168,7 @@ gm.post_script_hook(gm.constants.actor_phy_on_landed, function(self, other, resu
     end
 end)
 
-Callback.add(Callback.TYPE.onDamagedProc, "knockupFinExecute", function(actor, hit_info)
+Callback.add(Callback.TYPE.onDamagedProc, "spikingFinExecute", function(actor, hit_info)
 	local inflictor = (Instance.wrap(hit_info.inflictor))
 	if GM.actor_is_classic(actor) and not GM.actor_is_boss(actor) then
 		if actor.object_index ~= gm.constants.oLizardFG and actor.object_index ~= gm.constants.oLizardF then
@@ -179,7 +179,7 @@ Callback.add(Callback.TYPE.onDamagedProc, "knockupFinExecute", function(actor, h
 						actor.dead = false
 					end
 					actor:get_data().applier = inflictor
-					actor:buff_apply(debuffknockup, 600)
+					actor:buff_apply(debuffspiking, 600)
 				end
 			end
 		end
