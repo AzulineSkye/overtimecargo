@@ -33,18 +33,23 @@ tri:onPostStep(function(actor, stack)
 	end
 end)
 
-tri:onDamagedProc(function(actor, stack)
-	actor:get_data().triangletimer = 7 * 60
-	actor:get_data().triangleactivated = false
-	actor:buff_remove(buff)
-	if actor:buff_stack_count(buff) > 0 then
-		gm.sound_play_networked(gm.constants.wCrit2, 1, 1, actor.x, actor.y)
+tri:onDamagedProc(function(actor, attacker, stack, hit_info)
+	if hit_info.damage > 0 then
+		actor:get_data().triangletimer = 7 * 60
+		actor:get_data().triangleactivated = false
+		actor:buff_remove(buff)
+		if actor:buff_stack_count(buff) > 0 then
+			gm.sound_play_networked(gm.constants.wCrit2, 1, 1, actor.x, actor.y)
+		end
+		actor:buff_remove(buff)
 	end
-	actor:buff_remove(buff)
 end)
 
 tri:onAttackHit(function(actor, victim, stack, hit_info)
-	if actor:buff_stack_count(buff) > 0 and victim:exists() then
-		victim:damage_inflict(victim, hit_info.damage * 0.12 * stack, 0, actor, victim.x, victim.y, hit_info.damage * 0.12 * stack, actor.team, Color.from_rgb(144, 144, 255))
+	if actor:buff_stack_count(buff) > 0 and victim:exists() and hit_info.trihit == nil then
+		local attack = actor:fire_direct(victim, (hit_info.damage / actor.damage) * 0.12 * stack, 0, victim.x, victim.y, nil, false)
+		attack.attack_info.climb = hit_info.climb
+		attack.attack_info.damage_color = Color.from_rgb(144, 144, 255)
+		attack.attack_info.trihit = true
 	end
 end)
