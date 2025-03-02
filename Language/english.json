@@ -30,9 +30,9 @@
 		"name" : "Spiking Fin",
 		"pickup": "Instantly kill low health elites, stunning and damaging nearby enemies.",
 		"description": "Elite enemies below <r>13%</c> <c_stack>(+13% per stack)</c> <r>health</c> are sent up into the air and slammed back to the ground, <y>stunning</c> and dealing <y>damage equal to their remaining health</c> to nearby enemies.",
-		"destination": "Cage 255,\nPreservation Center,\nThe Big Dipper",
+		"destination": "Caloris Basin, \nCerberus Blast Furnace Plant,\nMercury",
 		"date": "10/10/2056",
-		"story": "We're sorry to say that the surgery was not a success. Big guy just couldn't handle the stress. \nI remember you saying before the surgery you loved his fins, so we'll send back what we could salvage of them. \nTake care, sir.",
+		"story": "Don’t leave a single trace of this. \n\nTechnology’s gone way too damn far. Brainless suits are just throwing darts at the damn wall, going, 'Hey, we can do it with other fossils, let’s biologically reconstruct THIS one next!' \nThese bastards were not only invasive- one of the first interplanetary invasives nonetheless, but their hunting tactics were.. Disturbingly, insanely brutal, to say the least. HUMPBACKS would be flung 20 feet into the air and beached just by a couple of them. By all means, ensure every last bit of this spine is vaporized as thoroughly possible. \n\nThis would devastate the trout population otherwise.",
 		"priority": "<g>Priority/Biological</c>"
 		},
 
@@ -42,7 +42,7 @@
 		"description": "<y>Tether</c> to the nearest <y>1</c> <c_stack>(+1 per stack)</c> enemies, dealing <y>100% damage</c> and <g>healing for 2.5% of your maximum health</c>.",
 		"destination": "Public Research Lab,\nSweden,\nEarth",
 		"date": "10/11/2056",
-		"story" : "Hey man, everything good on your end? \n\nWe’re doing fine now- I myself woke up pretty good today. Cheryl, though… she’s still recovering. She’s been washed, doesn’t smell so bad anymore, and I’m nursing her as I write this to you. We were just lucky enough to have some spare elixirs on hand, so it should be steady for her… just doesn’t seem to be kicking in yet, for whatever reason. Again, my condolences, we’re all praying for her- but in other news… I found a crazy antique while the guys weren’t looking! Just looks like a crusty-ass vase at first, but there’s… something weird inside, kinda like tar. But I swear when it’s closed I can feel something moving inside, almost like it’s alive. I also had to leave it in my quarters for now because as neat as it is, it smells AWFUL. We could poke and prod at it together whenever I get back, just like old times, maybe? \n\nHope you’ll consider! See you soon, buddy.",
+		"story" : "Hey man, everything good on your end? \n\nWe’re doing fine now- I myself woke up pretty good today. Cheryl, though.. she’s still recovering. She’s been washed, doesn’t smell so bad anymore, and I’m nursing her as I write this to you. We were just lucky enough to have some spare elixirs on hand, so it should be steady for her.. just doesn’t seem to be kicking in yet, for whatever reason. Again, my condolences, we’re all praying for her- but in other news.. I found a crazy antique while the guys weren’t looking! Just looks like a crusty-ass vase at first, but there’s.. something weird inside, kinda like tar. But I swear when it’s closed I can feel something moving inside, almost like it’s alive. I also had to leave it in my quarters for now because as neat as it is, it smells AWFUL. We could poke and prod at it together whenever I get back, just like old times, maybe? \n\nHope you’ll consider! See you soon, buddy.",
 		"priority": "<r>High Priority/Fragile/Biological</c>"
 		},
 
@@ -107,7 +107,7 @@
 		"description": "Increases the amount of interactables on each stage by <b>15%</c> <c_stack>(+15% per stack)</c>.",
 		"destination": "??????,\n??????,\n??????",
 		"date": "??/??/????",
-		"story" : "I th??nk i mi?ht?v? mess?d with this pl?c? t?? much.?.. What h??e i d?ne... W?s playin? ??? wo?th it?\n????????????????????????????????????????????",
+		"story" : "i am god \n\n -Sonick dot EXE",
 		"priority": "<g>Priority</c>"
 		},
 	"magiciansHat" : {
@@ -125,7 +125,7 @@
 		"description": "<y>Spawn a bouncy mushroom</c> below you to <y>block all fall damage</c> once. Recharges after <b>15</c> <c_stack>(-20% per stack)</c> <b>seconds</c>.",
 		"destination": "Herbarium Centrale Italicum, \nFlorence, \nItaly, \nEarth",
 		"date": "2/20/2056",
-		"story": "The contents of this shipment are a groundbreaking discovery in the fields of mycology, biology, and industrial manufacturing. Not only is the flesh of the cap a cost-effective, renewable and seamless replacement for rubber tree harvesting, but the coil-like structure of the stem yields the same flexibility and endurance as a titanium alloy spring-- if not stronger. Further research is needed, but as is, the capabilities and industrial benefits just from this single specie of mushroom cannot be understated... SO LONG AS IT IS HANDLED WITH CARE.\n\n AND YES. THAT MEANS DON'T. BOUNCE. ON. THE CAP. LIKE A TRAMPOLINE. I CANNOT BELIEVE I HAVE TO CLARIFY THIS. ******* OF COURSE IT WILL PERMANENTLY DAMAGE THE SAMPLE WHAT ELSE IS THERE TO EXPECT????????????????????\n\n  ...this is the last sample we were able to provide to any available export service. Out of ANY shipment that has been marked as 'Fragile', for the love of the gods, just treat this one like your child or something. Please. \n -Dr. Jumpman, Ph.D.",
+		"story": "The contents of this shipment are a groundbreaking discovery in the fields of mycology, biology, and industrial manufacturing. Not only is the flesh of the cap a cost-effective, renewable and seamless replacement for rubber tree harvesting, but the coil-like structure of the stem yields the same flexibility and endurance as a titanium alloy spring-- if not stronger. Further research is needed, but as is, the capabilities and industrial benefits just from this single specie of mushroom cannot be understated.. SO LONG AS IT IS HANDLED WITH CARE.\n\n AND YES. THAT MEANS DON'T. BOUNCE. ON. THE CAP. LIKE A TRAMPOLINE. I CANNOT BELIEVE I HAVE TO CLARIFY THIS. ******* OF COURSE IT WILL PERMANENTLY DAMAGE THE SAMPLE WHAT ELSE IS THERE TO EXPECT????????????????????\n\n  ..this is the last sample we were able to provide to any available export service. Out of ANY shipment that has been marked as 'Fragile', for the love of the gods, just treat this one like your child or something. Please. \n -Dr. Jumpman, Ph.D.",
 		"priority": "<w>High Priority/Fragile</c>"
 		},
 	"windupKey" : {
@@ -143,7 +143,7 @@
 		"description": "After not being hit for 7 seconds, <y>increase the damage</c> of your hits by <y>12%</c> <c_stack>(+12% per stack)</c>.",
 		"destination": "Werneth School,\nGreater Manchester,\nEarth",
 		"date": "04/04/2056",
-		"story": "Every single piece of an orchestra is just as important as the last. From the melodics, to the brass, to percussion, EVERYTHING works in tandem to create a flowing, synchronous piece of ART! As my students, I expect each and every one of you to not only respect these instruments I'll be sending you, but to treat them with the same love they've been given over the years of I've owned them. \n\nDD, you will be borrowing my cello. Carved with pristine chestnut oak, oiled with a linseed finish, and not a single SCRATCH can be found on the its beautiful body. Tina, you can borrow my trombone. This piece of finery made of shining brass is to be polished DAILY. Not a single day is to be missed or the acoustics will be RUINED. Ludwig, you are to receive my prized harpsichord. I know that you're skilled with the ivory keys, so I don't expect it to take long for you to adapt. I hope your home has the space for it! \nOh yeah, Steven. Uhhhh.. you can... you can take the triangle.",
+		"story": "Every single piece of an orchestra is just as important as the last. From the melodics, to the brass, to percussion, EVERYTHING works in tandem to create a flowing, synchronous piece of ART! As my students, I expect each and every one of you to not only respect these instruments I'll be sending you, but to treat them with the same love they've been given over the years of I've owned them. \n\nDD, you will be borrowing my cello. Carved with pristine chestnut oak, oiled with a linseed finish, and not a single SCRATCH can be found on the its beautiful body. Tina, you can borrow my trombone. This piece of finery made of shining brass is to be polished DAILY. Not a single day is to be missed or the acoustics will be RUINED. Ludwig, you are to receive my prized harpsichord. I know that you're skilled with the ivory keys, so I don't expect it to take long for you to adapt. I hope your home has the space for it! \nOh yeah, Steven. Uhhhh.. you can.. you can take the triangle.",
 		"priority": "<w>Standard</c>"
 		}
 	},
