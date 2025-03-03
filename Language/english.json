@@ -78,9 +78,9 @@
 		"name" : "Gold Dust",
 		"pickup": "Hit enemies drop gold. Spawn a lootbug with temporary items based on current gold upon activating the Teleporter.",
 		"description": "Enemies drop <y>10¢</c> <c_stack>(+10¢ per stack)</c> <y>gold</c> on hit. Scales with time and damage dealt. A lootbug with up to <y>10 temporary items</c> spawns upon activating the Teleporter, based on <y>current gold</c>.",
-		"destination": "1st Floor,\nForging Station 33,\nAsteroid Belt",
+		"destination": "Chicago Grand Terminal,\nUnited States,\nEarth",
 		"date": "09/10/2056",
-		"story" : "We're rich!",
+		"story" : "We’re happy to report that after a thorough review of your performance on the expedition, your skillset is quite unlike anything we’ve seen from our own staff thus far! Astounding work, and we once again thank you heartily for taking part in our Collaborative Program with UES. As a consolation prize- and as a means to end the obnoxiously eager push from our employees whom you worked with- you’ve also been granted a pure sample of ground-up Hoxxes Gold.. Assumedly pure, anyways. Consider it a keepsake! Just be sure no grubs of any kind were snuck onboard before departure. From all of us at Mission Control, Godspeed! And from your fellow miners, \n'Rock and Stone forever!'",
 		"priority": "<g>Priority</c>"
 		},
 	"specialTreatment" : {
@@ -105,10 +105,10 @@
 		"name" : "Unstable Manipulator",
 		"pickup": "More interactables each stage.",
 		"description": "Increases the amount of interactables on each stage by <b>15%</c> <c_stack>(+15% per stack)</c>.",
-		"destination": "??????,\n??????,\n??????",
-		"date": "??/??/????",
-		"story" : "i am god \n\n -Sonick dot EXE",
-		"priority": "<g>Priority</c>"
+		"destination": "Wing Gaster,\n's Lab,\nHotla\nnds,\nFrom UnderTale",
+		"date": "66/66/6666",
+		"story" : "ENTRY NUMBER 17\nDARK DARKER YET DARKER\nTHE DARKNESS KEEPS GROWING\nTHE SHADOWS CUTTING DEEPER\nPHOTON READINGS NEGATIVE\nTHIS NEXT EXPERIMENT SEEMS\nVERY\nVERY\nINTERESTING\n...\nWHAT DO YOU TWO THINK?",
+		"priority": "<g>Deltarune Tomorrow</c>"
 		},
 	"magiciansHat" : {
 		"name" : "Magician's Hat",
