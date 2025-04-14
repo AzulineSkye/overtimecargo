@@ -140,7 +140,7 @@
 	"resonatingTriangle" : {
 		"name" : "Resonating Triangle",
 		"pickup": "Deal more damage outside of danger.",
-		"description": "After not being hit for 7 seconds, <y>increase the damage</c> of your hits by <y>12%</c> <c_stack>(+12% per stack)</c>.",
+		"description": "After not being hit for 7 seconds, increase your <y>base damage</c> by <y>5</c> <c_stack>(+5 per stack)</c>.",
 		"destination": "Werneth School,\nGreater Manchester,\nEarth",
 		"date": "04/04/2056",
 		"story": "Every single piece of an orchestra is just as important as the last. From the melodics, to the brass, to percussion, EVERYTHING works in tandem to create a flowing, synchronous piece of ART! As my students, I expect each and every one of you to not only respect these instruments I'll be sending you, but to treat them with the same love they've been given over the years of I've owned them. \n\nDD, you will be borrowing my cello. Carved with pristine chestnut oak, oiled with a linseed finish, and not a single SCRATCH can be found on the its beautiful body. Tina, you can borrow my trombone. This piece of finery made of shining brass is to be polished DAILY. Not a single day is to be missed or the acoustics will be RUINED. Ludwig, you are to receive my prized harpsichord. I know that you're skilled with the ivory keys, so I don't expect it to take long for you to adapt. I hope your home has the space for it! \nOh yeah, Steven. Uhhhh.. you can.. you can take the triangle.",

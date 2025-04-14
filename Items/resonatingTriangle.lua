@@ -12,6 +12,10 @@ buff.show_icon = true
 buff.icon_sprite = sprite_buff
 buff:clear_callbacks()
 
+buff:onStatRecalc(function(actor, stack)
+	actor.damage = actor.damage + 5 * actor:item_stack_count(tri)
+end)
+
 tri:onAcquire(function(actor, stack)
 	if actor:get_data().triangletimer == nil then
 		actor:get_data().triangletimer = 0
@@ -42,14 +46,5 @@ tri:onDamagedProc(function(actor, attacker, stack, hit_info)
 			gm.sound_play_networked(gm.constants.wCrit2, 1, 1, actor.x, actor.y)
 		end
 		actor:buff_remove(buff)
-	end
-end)
-
-tri:onAttackHit(function(actor, victim, stack, hit_info)
-	if actor:buff_stack_count(buff) > 0 and victim:exists() and hit_info.trihit == nil then
-		local attack = actor:fire_direct(victim, (hit_info.damage / actor.damage) * 0.12 * stack, 0, victim.x, victim.y, nil, false)
-		attack.attack_info.climb = hit_info.climb
-		attack.attack_info.damage_color = Color.from_rgb(144, 144, 255)
-		attack.attack_info.trihit = true
 	end
 end)
