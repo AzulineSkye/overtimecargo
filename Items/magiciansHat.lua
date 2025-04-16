@@ -122,7 +122,7 @@ hat:onDrop(function(actor)
 	end
 	actor:get_data().magiciansHatItems:destroy()
 	actor:get_data().magiciansHatObjects:destroy()
-	actor:get_data().magiciansHatTier:destroy()
+	actor:get_data().magiciansHatTiers:destroy()
 	hat:set_sprite(sprite_hat)
 	hat:set_cooldown(90)
 end)
