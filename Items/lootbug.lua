@@ -43,7 +43,32 @@ lootbug:onCreate(function(actor)
 end)
 
 lootbug:onStep(function(actor)
-	actor:buff_apply(Buff.find("ror", "fear"), 99999)
+	actor.fleeing = true
+	actor:alarm_set(0, -1) -- disable the classic enemy ai -- not perfect but it does the job
+	
+	if actor.fleeing and actor.actor_state_current_id == -1 then
+		-- attempt to flee at all times
+		if Instance.exists(actor.target) then
+			local sync = false
+
+			if actor.target.x > actor.x then
+				if not gm.bool(actor.moveLeft) then sync = true end
+				actor.moveLeft = true
+				actor.moveRight = false
+			else
+				if not gm.bool(actor.moveRight) then sync = true end
+				actor.moveLeft = false
+				actor.moveRight = true
+			end
+
+			if sync then
+				actor:net_send_instance_message(0) -- actor_position_info
+			end
+		else
+			actor.target = gm.instance_nearest(actor.x, actor.y, gm.constants.oP)
+		end
+	end
+	
 	if actor.lifetime > 0 then
 		actor.lifetime = actor.lifetime - 1
 	else

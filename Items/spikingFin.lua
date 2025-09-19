@@ -45,10 +45,17 @@ shockwave:onStep(function(self)
 	for _, actor in ipairs(actors) do
 		if self:attack_collision_canhit(actor) and not data.hit_list[actor.id] then
 			if gm._mod_net_isHost() then
-				local direct = self.parent:fire_direct(actor, 1, self.direction, self.x, self.y, gm.constants.sSparks11).attack_info
-				direct:set_damage(self:get_data().enemymaxhp * ((0.13 * self.parent:item_stack_count(fin)) / (1 + 0.13 * self.parent:item_stack_count(fin))))
-				direct:set_stun(1)
-			end
+				if self:actor_is_elite(actor) then
+					local direct = self.parent:fire_direct(actor, 1, self.direction, self.x, self.y, gm.constants.sSparks11).attack_info
+					direct:set_damage((self:get_data().enemymaxhp * ((0.13 * self.parent:item_stack_count(fin)) / (1 + 0.13 * self.parent:item_stack_count(fin)))) * 0.5)
+					direct:set_stun(1)
+				else
+					local direct = self.parent:fire_direct(actor, 1, self.direction, self.x, self.y, gm.constants.sSparks11).attack_info
+					direct:set_damage(self:get_data().enemymaxhp * ((0.13 * self.parent:item_stack_count(fin)) / (1 + 0.13 * self.parent:item_stack_count(fin))))
+					direct:set_stun(1)					
+					
+				end
+			end 	
 			data.hit_list[actor.id] = true
 		end
 	end
@@ -142,8 +149,8 @@ local guarded = false
 
 gm.pre_script_hook(gm.constants.actor_phy_on_landed, function(self, other, result, args)
     local real_self = Instance.wrap(self)
-    if not gm.bool(self.invincible) and real_self.fallImmunity then
-        self.invincible = 1
+    if not gm.bool(self.intangible) and real_self.fallImmunity then
+        self.intangible = 1
         guarded = true
         real_self.fallImmunity = false
     end
@@ -151,7 +158,7 @@ end)
 
 gm.post_script_hook(gm.constants.actor_phy_on_landed, function(self, other, result, args)
     if guarded then
-        self.invincible = 0
+        self.intangible = 0
         guarded = false
     end
 end)

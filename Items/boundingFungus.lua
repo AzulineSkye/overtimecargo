@@ -21,7 +21,8 @@ local boinged = false
 boing:onStep(function(self)
 	if self.parent and self:is_colliding(self.parent) and self.parent:get_data().shroomjumped == nil then
 		self.parent.pVspeed = -10
-		gm.sound_play_networked(sound_boing, 1, 0.8 + math.random() * 0.2, self.x, self.y)
+		gm.sound_play_networked(gm.constants.wGeyser, 1, 1.1, self.x, self.y)
+		gm.sound_play_networked(sound_boing, 0.6, 1 + math.random() * 0.2, self.x, self.y)
 	end
 	
 	if self.parent.pVspeed <= -10 then

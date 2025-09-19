@@ -37,5 +37,7 @@ end)
 
 dust:onStageStart(function(actor, stack)
 	local data = actor:get_data()
-	data.lootbugspawned = 0
+	if data.lootbugspawned == 1 then
+		data.lootbugspawned = 0
+	end
 end)

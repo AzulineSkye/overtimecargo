@@ -6,7 +6,7 @@ local treatment = Item.new(NAMESPACE, "specialTreatment")
 treatment:clear_callbacks()
 treatment:set_sprite(sprite_treatment)
 treatment:set_tier(Item.TIER.common)
-treatment:set_loot_tags(Item.LOOT_TAG.category_healing)
+treatment:set_loot_tags(Item.LOOT_TAG.category_healing, Item.LOOT_TAG.category_utility)
 
 local treatment_used = Item.new(NAMESPACE, "specialTreatmentConsumed", true)
 treatment_used:set_sprite(sprite_treatment_used)
@@ -41,6 +41,7 @@ treatment:onAcquire(function(actor, stack)
 end)
 
 treatment:onDamagedProc(function(actor, attacker, stack, hit_info)
+	
 	if actor.hp < actor.maxhp * 0.251 then
 		actor:add_barrier(actor.maxbarrier * 0.75 - (actor.maxhp * 0.251 - actor.hp))
 		actor.hp = actor.maxhp * 0.251
@@ -51,8 +52,27 @@ treatment:onDamagedProc(function(actor, attacker, stack, hit_info)
 		flash.image_blend = Color.YELLOW
 		gm.sound_play_networked(gm.constants.wBarrierActivate, 1, 0.8 + math.random() * 0.2, actor.x, actor.y)
 		gm.sound_play_networked(gm.constants.wChildDeath, 1, 1.6 + math.random() * 0.4, actor.x, actor.y)
-		actor:item_remove(treatment)
-		actor:item_give(treatment_used)
+		--get rid of the temp stacks if its consumed while temp
+		local normal = actor:item_stack_count(treatment, Item.STACK_KIND.normal)
+        local temp = actor:item_stack_count(treatment, Item.STACK_KIND.temporary_blue)
+		local temp2 = actor:item_stack_count(treatment, Item.STACK_KIND.temporary_red)
+		
+		--really annoying thing i had to do bc consuming temp stacks kept consuming normal stacks
+		if normal > 0 and not (temp > 0 or temp2 > 0) then
+            actor:item_remove(treatment, 1, Item.STACK_KIND.normal)
+            actor:item_give(treatment_used, 1, Item.STACK_KIND.normal)
+        end
+		
+        if temp > 0 then
+            actor:item_remove(treatment, 1, Item.STACK_KIND.temporary_blue)
+            actor:item_give(treatment_used, 1, Item.STACK_KIND.temporary_blue)
+        end
+		
+		--the first time this was cared about ever bc magician's hat
+		if temp2 > 0 then
+            actor:item_remove(treatment, 1, Item.STACK_KIND.temporary_red)
+            actor:item_give(treatment_used, 1, Item.STACK_KIND.temporary_red)
+        end
 	end
 end)
 
@@ -69,8 +89,25 @@ treatment_used:onAcquire(function(actor, stack)
 end)
 
 treatment_used:onStageStart(function(actor, stack)
-	actor:item_give(treatment, actor:item_stack_count(treatment_used))
-	actor:item_remove(treatment_used, actor:item_stack_count(treatment_used))
+	--ditto with line 55
+	local normal = actor:item_stack_count(treatment_used, Item.STACK_KIND.normal)
+    local temp = actor:item_stack_count(treatment_used, Item.STACK_KIND.temporary_blue)
+	local temp2 = actor:item_stack_count(treatment, Item.STACK_KIND.temporary_red)
+	
+	if normal > 0 then
+		actor:item_give(treatment, normal, Item.STACK_KIND.normal)
+		actor:item_remove(treatment_used, normal, Item.STACK_KIND.normal)
+	end
+	
+	if temp > 0 then
+		actor:item_give(treatment, temp, Item.STACK_KIND.temporary_blue)
+		actor:item_remove(treatment_used, temp, Item.STACK_KIND.temporary_blue)
+	end
+	
+	if temp > 0 then
+		actor:item_give(treatment, temp, Item.STACK_KIND.temporary_red)
+		actor:item_remove(treatment_used, temp, Item.STACK_KIND.temporary_red)
+	end
 end)
 
 treatment_used:onPostStep(function(actor, stack)

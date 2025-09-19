@@ -4,7 +4,6 @@ local vase = Item.new(NAMESPACE, "siphoningVase")
 vase:set_sprite(sprite_vase)
 vase:set_tier(Item.TIER.rare)
 vase:set_loot_tags(Item.LOOT_TAG.category_damage, Item.LOOT_TAG.category_healing)
-
 vase:clear_callbacks()
 vase:onAcquire(function(actor, stack)
 	if actor:get_data().pulse == nil then
@@ -16,7 +15,7 @@ vase:onPostStep(function(actor, stack)
 	local i = 0
 	local targetenemies = List.new()
 	
-	GM.collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, false)
+	actor:collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, false)
 	
 	for _, victim in ipairs(targetenemies) do 
 		if victim.team ~= actor.team then
@@ -54,17 +53,20 @@ vase:onPreDraw(function(actor, stack)
 		actor:get_data().pulse = actor:get_data().pulse - 4
 	end
 	
-	GM.collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, false)
+	actor:collision_ellipse_list(actor.x - 180, actor.y - 180, actor.x + 180, actor.y + 180, gm.constants.pActor, false, true, targetenemies, false)
 	
 	for _, victim in ipairs(targetenemies) do
 		if victim.team ~= actor.team then
 			i = i + 1
 			if i <= stack then
-				gm.draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse / 1.5))
-				gm.draw_line_width(actor.x, actor.y, victim.x, victim.y, 4)
+				local x2 = (actor.x + victim.x) / 2
+				local y2 = (actor.y + victim.y) / 2 + 80
+				actor:draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse / 1.5))
+				actor:draw_line3(actor.x, actor.y, x2, y2, victim.x, victim.y, 8, 2, 6, 8)
 				
-				gm.draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse))
-				gm.draw_line_width(actor.x, actor.y, victim.x, victim.y, 2)
+				actor:draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse))
+				actor:draw_line3(actor.x, actor.y, x2, y2, victim.x, victim.y, 4, 0, 4, 8)
+				
 			else
 				break
 			end
