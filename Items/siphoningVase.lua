@@ -60,12 +60,12 @@ vase:onPreDraw(function(actor, stack)
 			i = i + 1
 			if i <= stack then
 				local x2 = (actor.x + victim.x) / 2
-				local y2 = (actor.y + victim.y) / 2 + 80
+				local y2 = (actor.y + victim.y) / 2 - 80
 				actor:draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse / 1.5))
-				actor:draw_line3(actor.x, actor.y, x2, y2, victim.x, victim.y, 8, 2, 6, 8)
+				actor:draw_line3(actor.x, actor.y, x2, y2, victim.x, victim.y, 6, 3, 2, 8)
 				
 				actor:draw_set_colour(Color.from_hsv(100, 100, actor:get_data().pulse))
-				actor:draw_line3(actor.x, actor.y, x2, y2, victim.x, victim.y, 4, 0, 4, 8)
+				actor:draw_line3(actor.x, actor.y, x2, y2, victim.x, victim.y, 3, 2, 1, 8)
 				
 			else
 				break

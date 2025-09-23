@@ -145,6 +145,33 @@
 		"date": "04/04/2056",
 		"story": "Every single piece of an orchestra is just as important as the last. From the melodics, to the brass, to percussion, EVERYTHING works in tandem to create a flowing, synchronous piece of ART! As my students, I expect each and every one of you to not only respect these instruments I'll be sending you, but to treat them with the same love they've been given over the years of I've owned them. \n\nDD, you will be borrowing my cello. Carved with pristine chestnut oak, oiled with a linseed finish, and not a single SCRATCH can be found on the its beautiful body. Tina, you can borrow my trombone. This piece of finery made of shining brass is to be polished DAILY. Not a single day is to be missed or the acoustics will be RUINED. Ludwig, you are to receive my prized harpsichord. I know that you're skilled with the ivory keys, so I don't expect it to take long for you to adapt. I hope your home has the space for it! \nOh yeah, Steven. Uhhhh.. you can.. you can take the triangle.",
 		"priority": "<w>Standard</c>"
+		},
+	"moonrockWhetstone" : {
+		"name" : "Moonrock Whetstone",
+		"pickup" : "Slightly stronger Critical strikes. Gain increased Critical strike chance after activating the teleporter.",
+		"description" : "Increase <y>Critical strike damage by 5</c> <c_stack>(+3 per stack)</c>. During the teleporter event, gain <y>+12%</c> <c_stack>(+3% per stack)</c> <y>Critical strike chance.</c>",
+		"destination" : "your moms house",
+		"date": "69/420",
+		"story": "mr. thrix eats this",
+		"priority": "ill do it tomorrow"
+		},
+	"energyDrink" : {
+		"name" : "Energy Drink",
+		"pickup" : "Gain a temporary speed boost at the start of each stage.",
+		"description" : "Upon entering a stage, <y>increase movement by 25%</c> <c_stack>(+17% per stack)</c> and <y>attack speed by 15%</c> <c_stack>(+7% per stack)</c> for <b>30</c> <c_stack>(+5 per stack)</c> <b>seconds.</c>",
+		"destination" : "youer dads house",
+		"date": "64/920",
+		"story": "97-year-old CHEF unit still makes NRG the old-fashioned way.",
+		"priority": "Joe Biden"
+		},
+	"nanomachines" : {
+		"name" : "Nanomachines",
+		"pickup" : "They harden in response to physical trauma.",
+		"description" : "Gain <g>30</c> <c_stack>(+30 per stack)</c> <g>temporary shield</c> when falling under <r>50% health.</c> Recharges every 15 seconds. <g>Each point of active shield grants 0.5</c> <c_stack>(+0.5 per stack)</c> <g>armor</c>.",
+		"destination" : "im fuckin INVINCIBLE wait wrong reference im fake",
+		"date": "4",
+		"story": "Standing Here with Real Ice",
+		"priority": "Political Joke Goes Here"
 		}
 	},
 }

@@ -18,6 +18,10 @@ dust:onAcquire(function(actor, stack)
 	if data.lootbugspawned == nil then
 		if Instance.find(gm.constants.oTeleporter).just_activated == 1 then
 			data.lootbugspawned = 1
+		elseif Instance.find(gm.constants.oTeleporterEpic).just_activated == 1 then
+			data.lootbugspawned = 1
+		elseif Instance.find(gm.constants.oCommand).just_activated == 1 then
+			data.lootbugspawned = 1
 		else
 			data.lootbugspawned = 0
 		end
@@ -26,12 +30,24 @@ end)
 
 dust:onPostStep(function(actor, stack)
 	local tp = Instance.find(gm.constants.oTeleporter)
+	local dtp = Instance.find(gm.constants.oTeleporterEpic)
+	local com = Instance.find(gm.constants.oCommand)
 	local data = actor:get_data()
 	
 	if tp.just_activated == 1 and data.lootbugspawned == 0 then
-		local lootbug = Object.find(NAMESPACE, "Lootbug"):create(tp.x, tp.y - 16)
+		local lootbug = Object.find(NAMESPACE, "Lootbug"):create(tp.x + math.random(-20, 20), tp.y - 13)
 		lootbug.itemcount = math.min(9, math.floor(actor.gold * 0.01 / GM._mod_game_getDirector().stage_chest_cost_scale))
 		data.lootbugspawned = 1
+		
+	elseif dtp.just_activated == 1 and data.lootbugspawned == 0 then
+		local lootbug = Object.find(NAMESPACE, "Lootbug"):create(dtp.x + math.random(-20, 20), dtp.y - 13)
+		lootbug.itemcount = math.min(9, math.floor(actor.gold * 0.01 / GM._mod_game_getDirector().stage_chest_cost_scale))
+		data.lootbugspawned = 1
+		
+	elseif com.just_activated == 1 and data.lootbugspawned == 0 then
+		local lootbug = Object.find(NAMESPACE, "Lootbug"):create(com.x + math.random(-20, 20), com.y - 13)
+		lootbug.itemcount = math.min(9, math.floor(actor.gold * 0.01 / GM._mod_game_getDirector().stage_chest_cost_scale))
+		data.lootbugspawned = 1		
 	end
 end)
 

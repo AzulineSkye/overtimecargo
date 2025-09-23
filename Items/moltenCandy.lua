@@ -2,9 +2,9 @@ local sprite_candy = Resources.sprite_load(NAMESPACE, "moltenCandy", path.combin
 local sprite_blob = Resources.sprite_load(NAMESPACE, "moltenCandyBlob", path.combine(PATH, "Sprites/moltenCandyBlob.png"), 1, 8, 8)
 local sprite_trail = Resources.sprite_load(NAMESPACE, "moltenCandyTrail", path.combine(PATH, "Sprites/moltenCandyTrail.png"), 6, 16, 12)
 local sprite_explode = Resources.sprite_load(NAMESPACE, "moltenCandyExplode", path.combine(PATH, "Sprites/moltenCandyExplode.png"), 5, 13, 18)
-local sound_explode = Resources.sfx_load(NAMESPACE, "moltenCandyExplodeSnd", path.combine(PATH, "Sprites/moltenCandyExplode.ogg"))
 local sprite_buff = Resources.sprite_load(NAMESPACE, "moltenCandyBuff", path.combine(PATH, "Sprites/moltenCandyBuff.png"), 1, 16, 16)
 
+local sound_explode = Resources.sfx_load(NAMESPACE, "moltenCandyExplodeSnd", path.combine(PATH, "Sounds/moltenCandyExplode.ogg"))
 local candy = Item.new(NAMESPACE, "moltenCandy")
 candy:set_sprite(sprite_candy)
 candy:set_tier(Item.TIER.uncommon)

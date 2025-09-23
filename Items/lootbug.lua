@@ -6,10 +6,10 @@ local sprite_spawn = Resources.sprite_load(NAMESPACE, "lootbugSpawn", path.combi
 local sprite_burrow = Resources.sprite_load(NAMESPACE, "lootbugBurrow", path.combine(PATH, "Sprites/lootbugBurrow.png"), 15, 24, 20)
 local sprite_death = Resources.sprite_load(NAMESPACE, "lootbugDeath", path.combine(PATH, "Sprites/lootbugDeath.png"), 12, 20, 21)
 
-local sound_idle1 = Resources.sfx_load(NAMESPACE, "lootbugIdle1", path.combine(PATH, "Sprites/lootbugIdle1.ogg"))
-local sound_idle2 = Resources.sfx_load(NAMESPACE, "lootbugIdle2", path.combine(PATH, "Sprites/lootbugIdle2.ogg"))
-local sound_run = Resources.sfx_load(NAMESPACE, "lootbugRun", path.combine(PATH, "Sprites/lootbugRun.ogg"))
-local sound_death = Resources.sfx_load(NAMESPACE, "lootbugDeath", path.combine(PATH, "Sprites/lootbugDeath.ogg"))
+local sound_idle1 = Resources.sfx_load(NAMESPACE, "lootbugIdle1", path.combine(PATH, "Sounds/lootbugIdle1.ogg"))
+local sound_idle2 = Resources.sfx_load(NAMESPACE, "lootbugIdle2", path.combine(PATH, "Sounds/lootbugIdle2.ogg"))
+local sound_run = Resources.sfx_load(NAMESPACE, "lootbugRun", path.combine(PATH, "Sounds/lootbugRun.ogg"))
+local sound_death = Resources.sfx_load(NAMESPACE, "lootbugDeath", path.combine(PATH, "Sounds/lootbugDeath.ogg"))
 
 local lootbug = Object.new(NAMESPACE, "Lootbug", Object.PARENT.enemyClassic)
 lootbug.obj_sprite = sprite_idle
@@ -78,9 +78,9 @@ lootbug:onStep(function(actor)
 	
 	if actor.madesound - actor.lifetime > 120 and math.random() <= 0.05 then
 		if math.random() <= 0.5 then
-			gm.sound_play_networked(sound_idle1, 1, 1, actor.x, actor.y)
+			gm.sound_play_networked(sound_idle1, 2, 1, actor.x, actor.y)
 		else
-			gm.sound_play_networked(sound_idle2, 1, 1, actor.x, actor.y)
+			gm.sound_play_networked(sound_idle2, 2, 1, actor.x, actor.y)
 		end
 		actor.madesound = actor.lifetime
 	end
@@ -94,7 +94,7 @@ lootbug:onStep(function(actor)
 		body.image_blend = actor.image_blend
 		body.sprite_palette = actor.sprite_palette
 		body.elite_type = actor.elite_type
-		gm.sound_play_networked(gm.constants.wGolemGSpawn, 1, 1, actor.x, actor.y)
+		gm.sound_play_networked(sound_run, 1, 1, actor.x, actor.y)
 		actor:destroy()
 	end
 end)

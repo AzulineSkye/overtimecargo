@@ -1,6 +1,7 @@
 local sprite_boungus = Resources.sprite_load(NAMESPACE, "boundingFungus", path.combine(PATH, "Sprites/boundingFungus.png"), 1, 16, 16)
 local sprite_boing_long = Resources.sprite_load(NAMESPACE, "boundingFungusBoingLong", path.combine(PATH, "Sprites/boingLong.png"), 14, 13, 37)
-local sound_boing = Resources.sfx_load(NAMESPACE, "boundingFungusBoingSFX", path.combine(PATH, "Sprites/boing.ogg"))
+
+local sound_boing = Resources.sfx_load(NAMESPACE, "boundingFungusBoingSFX", path.combine(PATH, "Sounds/boing.ogg"))
 
 local boungus = Item.new(NAMESPACE, "boundingFungus")
 boungus:set_sprite(sprite_boungus)
@@ -22,7 +23,7 @@ boing:onStep(function(self)
 	if self.parent and self:is_colliding(self.parent) and self.parent:get_data().shroomjumped == nil then
 		self.parent.pVspeed = -10
 		gm.sound_play_networked(gm.constants.wGeyser, 1, 1.1, self.x, self.y)
-		gm.sound_play_networked(sound_boing, 0.6, 1 + math.random() * 0.2, self.x, self.y)
+		gm.sound_play_networked(sound_boing, 0.6, 0.9 + math.random() * 0.2, self.x, self.y)
 	end
 	
 	if self.parent.pVspeed <= -10 then
