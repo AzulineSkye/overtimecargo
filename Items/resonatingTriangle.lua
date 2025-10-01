@@ -1,5 +1,5 @@
-local sprite_triangle = Resources.sprite_load(NAMESPACE, "resonatingTriangle", path.combine(PATH, "Sprites/resonatingTriangle.png"), 1, 16, 16)
-local sprite_buff = Resources.sprite_load(NAMESPACE, "resonatingTriangleBuff", path.combine(PATH, "Sprites/resonatingTriangleBuff.png"), 1, 10, 8)
+local sprite_triangle = Resources.sprite_load(NAMESPACE, "resonatingTriangle", path.combine(PATH, "Sprites/item/resonatingTriangle.png"), 1, 16, 16)
+local sprite_buff = Resources.sprite_load(NAMESPACE, "resonatingTriangleBuff", path.combine(PATH, "Sprites/buffs/resonatingTriangleBuff.png"), 1, 10, 8)
 
 local tri = Item.new(NAMESPACE, "resonatingTriangle")
 tri:set_sprite(sprite_triangle)

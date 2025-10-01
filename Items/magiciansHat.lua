@@ -1,5 +1,5 @@
-local sprite_hat = Resources.sprite_load(NAMESPACE, "magiciansHat", path.combine(PATH, "Sprites/magiciansHat.png"), 2, 16, 16)
-local sprite_hat_ready = Resources.sprite_load(NAMESPACE, "magiciansHatReady", path.combine(PATH, "Sprites/magiciansHatReady.png"), 2, 16, 16)
+local sprite_hat = Resources.sprite_load(NAMESPACE, "magiciansHat", path.combine(PATH, "Sprites/item/magiciansHat.png"), 2, 16, 16)
+local sprite_hat_ready = Resources.sprite_load(NAMESPACE, "magiciansHatReady", path.combine(PATH, "Sprites/item/magiciansHatReady.png"), 2, 16, 16)
 
 local hat = Equipment.new(NAMESPACE, "magiciansHat")
 hat:set_sprite(sprite_hat)

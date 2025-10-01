@@ -1,5 +1,5 @@
-local sprite_nrg = Resources.sprite_load(NAMESPACE, "energyDrinkSprite", path.combine(PATH, "Sprites/energyDrink.png"), 1, 16, 14)
-local sprite_buff = Resources.sprite_load(NAMESPACE, "drinkBuffIcon", path.combine(PATH, "Sprites/moonrockBuff1.png"), 1, 8, 8)
+local sprite_nrg = Resources.sprite_load(NAMESPACE, "energyDrinkSprite", path.combine(PATH, "Sprites/item/energyDrink.png"), 1, 16, 14)
+local sprite_buff = Resources.sprite_load(NAMESPACE, "drinkBuffIcon", path.combine(PATH, "Sprites/buffs/moonrockBuff1.png"), 1, 8, 8)
 
 local sound_drink = Resources.sfx_load(NAMESPACE, "drinkSound", path.combine(PATH, "Sounds/energyDrink.ogg"))
 
@@ -22,7 +22,7 @@ end)
 
 buff:onStatRecalc(function(actor, stack)
 	actor.pHmax = actor.pHmax + (0.22 + (0.48 * stack))
-	actor.attack_speed = actor.attack_speed + (0.08 + (0.07 * stack))
+	actor.attack_speed = actor.attack_speed + (0.08 + (0.17 * stack))
 end)
 
 nrg:onStageStart(function(actor, stack)

@@ -1,6 +1,6 @@
-local sprite_key = Resources.sprite_load(NAMESPACE, "windupKey", path.combine(PATH, "Sprites/windupKey.png"), 1, 16, 16)
-local sprite_bolts = Resources.sprite_load(NAMESPACE, "windupKeyParticles", path.combine(PATH, "Sprites/windupKeyParticles.png"), 5, 3, 3)
-local sprite_vfx = Resources.sprite_load(NAMESPACE, "windupKeyVFX", path.combine(PATH, "Sprites/windupKeyVFX.png"), 8, 10, 20)
+local sprite_key = Resources.sprite_load(NAMESPACE, "windupKey", path.combine(PATH, "Sprites/item/windupKey.png"), 1, 16, 16)
+local sprite_bolts = Resources.sprite_load(NAMESPACE, "windupKeyParticles", path.combine(PATH, "Sprites/fx/windupKeyParticles.png"), 5, 3, 3)
+local sprite_vfx = Resources.sprite_load(NAMESPACE, "windupKeyVFX", path.combine(PATH, "Sprites/fx/windupKeyVFX.png"), 8, 10, 20)
 
 local key = Item.new(NAMESPACE, "windupKey")
 key:set_sprite(sprite_key)

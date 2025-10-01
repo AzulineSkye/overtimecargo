@@ -1,4 +1,4 @@
-local sprite_fin = Resources.sprite_load(NAMESPACE, "spikingFin", path.combine(PATH, "Sprites/spikingFin.png"), 1, 16, 16)
+local sprite_fin = Resources.sprite_load(NAMESPACE, "spikingFin", path.combine(PATH, "Sprites/item/spikingFin.png"), 1, 16, 16)
 local eLem = Object.find("ror", "LizardF")
 local eLemG = Object.find("ror", "LizardFG")
 
@@ -45,7 +45,7 @@ shockwave:onStep(function(self)
 	for _, actor in ipairs(actors) do
 		if self:attack_collision_canhit(actor) and not data.hit_list[actor.id] then
 			if gm._mod_net_isHost() then
-				if self:actor_is_elite(actor) then
+				if actor.elite_type ~= -1 then
 					local direct = self.parent:fire_direct(actor, 1, self.direction, self.x, self.y, gm.constants.sSparks11).attack_info
 					direct:set_damage((self:get_data().enemymaxhp * ((0.13 * self.parent:item_stack_count(fin)) / (1 + 0.13 * self.parent:item_stack_count(fin)))) * 0.5)
 					direct:set_stun(1)

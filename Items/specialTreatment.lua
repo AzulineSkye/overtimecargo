@@ -1,6 +1,6 @@
-local sprite_treatment = Resources.sprite_load(NAMESPACE, "specialTreatment", path.combine(PATH, "Sprites/specialTreatment.png"), 1, 16, 16)
-local sprite_treatment_used = Resources.sprite_load(NAMESPACE, "specialTreatmentConsumed", path.combine(PATH, "Sprites/specialTreatmentConsumed.png"), 1, 16, 16)
-local sprite_buff_icon = Resources.sprite_load(NAMESPACE, "specialTreatmentBuff", path.combine(PATH, "Sprites/specialTreatmentBuff.png"), 1, 18, 14)
+local sprite_treatment = Resources.sprite_load(NAMESPACE, "specialTreatment", path.combine(PATH, "Sprites/item/specialTreatment.png"), 1, 16, 16)
+local sprite_treatment_used = Resources.sprite_load(NAMESPACE, "specialTreatmentConsumed", path.combine(PATH, "Sprites/item/specialTreatmentConsumed.png"), 1, 16, 16)
+local sprite_buff_icon = Resources.sprite_load(NAMESPACE, "specialTreatmentBuff", path.combine(PATH, "Sprites/buffs/specialTreatmentBuff.png"), 1, 18, 14)
 
 local treatment = Item.new(NAMESPACE, "specialTreatment")
 treatment:clear_callbacks()

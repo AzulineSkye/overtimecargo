@@ -1,4 +1,4 @@
-local sprite_manip = Resources.sprite_load(NAMESPACE, "unstableManipulator", path.combine(PATH, "Sprites/unstableManipulator.png"), 1, 16, 16)
+local sprite_manip = Resources.sprite_load(NAMESPACE, "unstableManipulator", path.combine(PATH, "Sprites/item/unstableManipulator.png"), 1, 16, 16)
 
 local manip = Item.new(NAMESPACE, "unstableManipulator")
 manip:set_sprite(sprite_manip)

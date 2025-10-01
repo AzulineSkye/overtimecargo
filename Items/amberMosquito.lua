@@ -1,4 +1,4 @@
-local sprite_amber = Resources.sprite_load(NAMESPACE, "AmberMosquito", path.combine(PATH, "Sprites/amberMosquito.png"), 1, 17, 17)
+local sprite_amber = Resources.sprite_load(NAMESPACE, "AmberMosquito", path.combine(PATH, "Sprites/item/amberMosquito.png"), 1, 17, 17)
 
 local amber = Item.new(NAMESPACE, "amberMosquito")
 amber:set_sprite(sprite_amber)

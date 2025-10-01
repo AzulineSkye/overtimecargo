@@ -1,8 +1,8 @@
-local sprite_candy = Resources.sprite_load(NAMESPACE, "moltenCandy", path.combine(PATH, "Sprites/moltenCandy.png"), 1, 17, 13)
-local sprite_blob = Resources.sprite_load(NAMESPACE, "moltenCandyBlob", path.combine(PATH, "Sprites/moltenCandyBlob.png"), 1, 8, 8)
-local sprite_trail = Resources.sprite_load(NAMESPACE, "moltenCandyTrail", path.combine(PATH, "Sprites/moltenCandyTrail.png"), 6, 16, 12)
-local sprite_explode = Resources.sprite_load(NAMESPACE, "moltenCandyExplode", path.combine(PATH, "Sprites/moltenCandyExplode.png"), 5, 13, 18)
-local sprite_buff = Resources.sprite_load(NAMESPACE, "moltenCandyBuff", path.combine(PATH, "Sprites/moltenCandyBuff.png"), 1, 16, 16)
+local sprite_candy = Resources.sprite_load(NAMESPACE, "moltenCandy", path.combine(PATH, "Sprites/item/moltenCandy.png"), 1, 17, 13)
+local sprite_blob = Resources.sprite_load(NAMESPACE, "moltenCandyBlob", path.combine(PATH, "Sprites/fx/moltenCandyBlob.png"), 1, 8, 8)
+local sprite_trail = Resources.sprite_load(NAMESPACE, "moltenCandyTrail", path.combine(PATH, "Sprites/fx/moltenCandyTrail.png"), 6, 16, 12)
+local sprite_explode = Resources.sprite_load(NAMESPACE, "moltenCandyExplode", path.combine(PATH, "Sprites/fx/moltenCandyExplode.png"), 5, 13, 18)
+local sprite_buff = Resources.sprite_load(NAMESPACE, "moltenCandyBuff", path.combine(PATH, "Sprites/buffs/moltenCandyBuff.png"), 1, 16, 16)
 
 local sound_explode = Resources.sfx_load(NAMESPACE, "moltenCandyExplodeSnd", path.combine(PATH, "Sounds/moltenCandyExplode.ogg"))
 local candy = Item.new(NAMESPACE, "moltenCandy")

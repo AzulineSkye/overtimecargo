@@ -1,5 +1,5 @@
-local sprite = Resources.sprite_load(NAMESPACE, "scrapMissiles", path.combine(PATH, "Sprites/scrapMissiles.png"), 1, 16, 16)
-local missile_sprite = Resources.sprite_load(NAMESPACE, "scrapMissilesMissile", path.combine(PATH, "Sprites/scrapMissilesMissile.png"), 3, 23, 5)
+local sprite = Resources.sprite_load(NAMESPACE, "scrapMissiles", path.combine(PATH, "Sprites/item/scrapMissiles.png"), 1, 16, 16)
+local missile_sprite = Resources.sprite_load(NAMESPACE, "scrapMissilesMissile", path.combine(PATH, "Sprites/fx/scrapMissilesMissile.png"), 3, 23, 5)
 
 local missiles = Item.new(NAMESPACE, "scrapMissiles")
 missiles:set_sprite(sprite)

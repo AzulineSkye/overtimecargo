@@ -9,7 +9,7 @@
 	"pizza" : {
 		"name" : "Pizza!",
 		"pickup": "All stats up!",
-		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP</c> per second.\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>",
+		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP/second.</c>\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>",
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
 		"story": "It's PIZZA time! 30 years or it's FREE! FREE, I SAID! YES, FREE!",
@@ -19,7 +19,7 @@
 	"scrapMissiles" : {
 		"name" : "Scrap Missiles",
 		"pickup": "Shoot missiles when enemies spawn.",
-		"description": "Shoot <y>3<c/> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
+		"description": "Shoot <y>3</c> <c_stack>(+1 per stack)</c> <y>small missiles for 3x80% damage</c> every time an enemy spawns.",
 		"destination": "Spot [REDACTED],\n[REDACTED],\n[REDACTED]",
 		"date": "10/20/2056",
 		"story": "These old pieces of junk nearly got us bloody killed! The base were saying they'd send us 'military grade' equipment.. what a bunch of cheapskates. Whole platoon got the fright of their life when the supplies drop EXPLODED mid-air. If it weren't for the fact we were all 400 yards away and well within our training grounds, we could've died! \nThese shoddy tubes of gunpowder were all we could 'salvage' from the landing. \n\nBarely.",
@@ -86,7 +86,7 @@
 	"specialTreatment" : {
 		"name" : "Special Treatment",
 		"pickup": "Gain barrier after falling to low health. Barrier gives a temporary boost of speed.",
-		"description": "Falling under <r>25% health</c> heals <g>75%</c> of your <g>maximum barrier</c> once per stage. Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
+		"description": "Falling under <r>25% health</c> heals <g>75% of your maximum health as barrier</c> once per stage. Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
 		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've developed this.. curative solution. We legally cannot call it medicine. But, I assure you, it has been throughly tested and it works a TREAT. \nMake sure to send me any anomalous results!",
@@ -95,7 +95,7 @@
 	"specialTreatmentConsumed" : {
 		"name" : "Empty Bottle",
 		"pickup": "All gone!",
-		"description": "Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>.",
+		"description": "Increase <y>movement speed</c> by <b>25%</c> <c_stack>(+25% per stack)</c> when you have <g>barrier</c>. <y>Restocks as Special Treatment</c> at the start of the next stage.",
 		"destination": "Clinic-D,\n4th Floor,\nSpace Station 22-B",
 		"date": "09/09/2056",
 		"story" : "Hello Mr. Cleus, I've heard you've been having more patients than usual. \nSo, as a way to speed up the recuperation process, I've developed this.. curative solution. We legally cannot call it medicine. But, I assure you, it has been throughly tested and it works a TREAT. \nMake sure to send me any anomalous results!",
@@ -146,7 +146,7 @@
 		"story": "Every single piece of an orchestra is just as important as the last. From the melodics, to the brass, to percussion, EVERYTHING works in tandem to create a flowing, synchronous piece of ART! As my students, I expect each and every one of you to not only respect these instruments I'll be sending you, but to treat them with the same love they've been given over the years of I've owned them. \n\nDD, you will be borrowing my cello. Carved with pristine chestnut oak, oiled with a linseed finish, and not a single SCRATCH can be found on the its beautiful body. Tina, you can borrow my trombone. This piece of finery made of shining brass is to be polished DAILY. Not a single day is to be missed or the acoustics will be RUINED. Ludwig, you are to receive my prized harpsichord. I know that you're skilled with the ivory keys, so I don't expect it to take long for you to adapt. I hope your home has the space for it! \nOh yeah, Steven. Uhhhh.. you can.. you can take the triangle.",
 		"priority": "<w>Standard</c>"
 		},
-	"moonrockWhetstone" : {
+	"moonStone" : {
 		"name" : "Moonrock Whetstone",
 		"pickup" : "Slightly stronger Critical strikes. Gain increased Critical strike chance after activating the teleporter.",
 		"description" : "Increase <y>Critical strike damage by 5</c> <c_stack>(+3 per stack)</c>. During the teleporter event, gain <y>+12%</c> <c_stack>(+3% per stack)</c> <y>Critical strike chance.</c>",
@@ -157,8 +157,8 @@
 		},
 	"energyDrink" : {
 		"name" : "Energy Drink",
-		"pickup" : "Gain a temporary speed boost at the start of each stage.",
-		"description" : "Upon entering a stage, <y>increase movement by 25%</c> <c_stack>(+17% per stack)</c> and <y>attack speed by 15%</c> <c_stack>(+7% per stack)</c> for <b>30</c> <c_stack>(+5 per stack)</c> <b>seconds.</c>",
+		"pickup" : "Gain a temporary speed and attack speed boost at the start of each stage.",
+		"description" : "Upon entering a stage, <y>increase both movement and attack speed by 25%</c> <c_stack>(+17% per stack)</c> for <b>30</c> <c_stack>(+5 per stack)</c> <b>seconds.</c>",
 		"destination" : "youer dads house",
 		"date": "64/920",
 		"story": "97-year-old CHEF unit still makes NRG the old-fashioned way.",
@@ -172,6 +172,33 @@
 		"date": "4",
 		"story": "Standing Here with Real Ice",
 		"priority": "Political Joke Goes Here"
+		},
+	"holyPauldron" : {
+		"name" : "Holy Pauldron",
+		"pickup" : "Gain barrier upon killing an elite. Barrier temporarily stops decaying.",
+		"description" : "When killing an elite, gain <g>25%</c> <c_stack>(+15% per stack)</c> <g>of your maximum health as barrier</c>. <g>Barrier</c> <y>stops decaying for 5</c> <c_stack>(+3 per stack)</c> <y>seconds.</c>",
+		"destination" : "gods angles",
+		"date": "9/23/25",
+		"story": "Jesus answered; 'I am The Way, The Truth, and The Light. No one comes through The Father except through me.'",
+		"priority": "<r>$6 SRIMP SPECIL</c>"
+		},
+	"regenPlating" : {
+		"name" : "Regenerative Plating",
+		"pickup" : "The next three repaired drones have increased armor and healing.",
+		"description" : "For the next <b>3</c> <c_stack>(+3 per stack)</c> drones purchased</c>, <g>increases the drone's armor by 100 and Health regeneration by 3.6 HP/Second</c>.",
+		"destination" : "",
+		"date": "",
+		"story": "ummm. risk of rain.. RETURNS??? whats that ??? i only like my Risky Rain 2oos come back to me when you can speak Infinite Proc Co Efficient",
+		"priority": ""
+		},
+	"regenPlatingUsed" : {
+		"name" : "Diminished Scraps",
+		"pickup" : "Does nothing. Rebuilds itself on the next stage.",
+		"description" : "<y>Restocks as Regenerative Plating</c> at the start of the next stage.",
+		"destination" : "",
+		"date": "",
+		"story": "",
+		"priority": ""
 		}
 	},
 }

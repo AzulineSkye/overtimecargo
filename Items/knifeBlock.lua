@@ -1,8 +1,8 @@
-local sprite_block = Resources.sprite_load(NAMESPACE, "knifeBlock", path.combine(PATH, "Sprites/knifeBlock.png"), 2, 16, 17)
-local sprite_block_empty = Resources.sprite_load(NAMESPACE, "knifeBlockEmpty", path.combine(PATH, "Sprites/knifeBlockEmpty.png"), 2, 16, 17)
-local sprite_cut = Resources.sprite_load(NAMESPACE, "skillCut", path.combine(PATH, "Sprites/skillCut.png"), 9, 55, 70)
-local sprite_cut_throw = Resources.sprite_load(NAMESPACE, "skillCutThrow", path.combine(PATH, "Sprites/skillCutThrow.png"), 1, 25, 5)
-local sprite_cut_icon = Resources.sprite_load(NAMESPACE, "skillCutIcon", path.combine(PATH, "Sprites/skillCutIcon.png"), 1)
+local sprite_block = Resources.sprite_load(NAMESPACE, "knifeBlock", path.combine(PATH, "Sprites/item/knifeBlock.png"), 2, 16, 17)
+local sprite_block_empty = Resources.sprite_load(NAMESPACE, "knifeBlockEmpty", path.combine(PATH, "Sprites/item/knifeBlockEmpty.png"), 2, 16, 17)
+local sprite_cut = Resources.sprite_load(NAMESPACE, "skillCut", path.combine(PATH, "Sprites/fx/skillCut.png"), 9, 55, 70)
+local sprite_cut_throw = Resources.sprite_load(NAMESPACE, "skillCutThrow", path.combine(PATH, "Sprites/fx/skillCutThrow.png"), 1, 25, 5)
+local sprite_cut_icon = Resources.sprite_load(NAMESPACE, "skillCutIcon", path.combine(PATH, "Sprites/fx/skillCutIcon.png"), 1)
 
 local block = Equipment.new(NAMESPACE, "knifeBlock")
 block:set_sprite(sprite_block)

@@ -1,5 +1,5 @@
-local sprite_boungus = Resources.sprite_load(NAMESPACE, "boundingFungus", path.combine(PATH, "Sprites/boundingFungus.png"), 1, 16, 16)
-local sprite_boing_long = Resources.sprite_load(NAMESPACE, "boundingFungusBoingLong", path.combine(PATH, "Sprites/boingLong.png"), 14, 13, 37)
+local sprite_boungus = Resources.sprite_load(NAMESPACE, "boundingFungus", path.combine(PATH, "Sprites/item/boundingFungus.png"), 1, 16, 16)
+local sprite_boing_long = Resources.sprite_load(NAMESPACE, "boundingFungusBoingLong", path.combine(PATH, "Sprites/fx/boingLong.png"), 14, 13, 37)
 
 local sound_boing = Resources.sfx_load(NAMESPACE, "boundingFungusBoingSFX", path.combine(PATH, "Sounds/boing.ogg"))
 

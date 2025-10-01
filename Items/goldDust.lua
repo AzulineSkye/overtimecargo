@@ -1,4 +1,4 @@
-local sprite_dust = Resources.sprite_load(NAMESPACE, "goldDust", path.combine(PATH, "Sprites/goldDust.png"), 1, 16, 17)
+local sprite_dust = Resources.sprite_load(NAMESPACE, "goldDust", path.combine(PATH, "Sprites/item/goldDust.png"), 1, 16, 17)
 
 local dust = Item.new(NAMESPACE, "goldDust")
 dust:set_sprite(sprite_dust)
