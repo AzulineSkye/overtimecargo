@@ -17,13 +17,6 @@ local rottenFood = Object.new(NAMESPACE, "cannedFoodDrops")
 rottenFood:set_sprite(sprite_proj)
 rottenFood:clear_callbacks()
 
--- fud:onAcquire(function(actor, stack)
-	-- local data = fud:get_data()
-	
-	-- data.parent = actor
-	
--- end)
-
 rottenFood:onCreate(function(self)
 	local data = self:get_data()
 	data.food = true
@@ -52,7 +45,7 @@ local data = self:get_data()
 		if data.grounded == 1 then
 			local buffed = 0
 			for _, victim in ipairs(self:get_collisions(gm.constants.pActor)) do
-				if victim.team ~= data.parent.team then
+				if victim.team ~= data.parent.team and victim:get_buff_time(victim, fudBuff) < 1 then
 					if not victim:get_data().foodDmg then
 						victim:get_data().foodDmg = data.parent.damage
 					end
@@ -63,15 +56,13 @@ local data = self:get_data()
 			end
 		else
 			self:move_contact_solid(270, 64)
-			-- gm.sound_play_networked(sound_explode, 1, 1, self.x, self.y)
-			-- local explode = GM.instance_create(self.x, self.y, gm.constants.oEfExplosion)
-			-- explode.sprite_index = sprite_explode
 			data.grounded = 1
 		end
 	end
 end)
 
 fud:onInteractableActivate(function(actor, stack, interactable)
+	--old effect
 	-- local poison = List.new()
 	-- interactable:collision_ellipse_list(interactable.x - 135, interactable.y - 135, interactable.x + 135, interactable.y + 135, gm.constants.pActor, false, true, poison, false)
 	-- for _, victim in ipairs(poison) do
@@ -88,6 +79,7 @@ fud:onInteractableActivate(function(actor, stack, interactable)
 	-- gm.draw_circle(interactable.x, interactable.y, 1, true)
 	-- gm.draw_set_alpha(1)
 	-- poison:destroy()
+	
 	if (#Instance.find_all(rottenFood)) < 21 then
 		for i = 0, 2 * stack, 1 do
 			local foodProj = rottenFood:create(interactable.x, interactable.y - 15)

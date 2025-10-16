@@ -69,7 +69,7 @@ moltenblob:onStep(function(self)
 		if data.grounded == 1 then
 			local buffed = 0
 			for _, victim in ipairs(self:get_collisions(gm.constants.pActor)) do
-				if victim.team ~= data.parent.team and victim:get_buff_time(victim, candybuff) <= 1 then
+				if victim.team ~= data.parent.team and victim:get_buff_time(victim, candybuff) < 1 then
 					if not victim:get_data().pool_damage then
 						victim:get_data().pool_damage = data.parent.damage
 					end
