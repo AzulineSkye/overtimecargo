@@ -47,9 +47,11 @@ end)
 --keep the buff active after activating tp
 roc:onPostStep(function(actor, stack)
 	local tp = Instance.find(gm.constants.oTeleporter)
+	local dtp = Instance.find(gm.constants.oTeleporterEpic)
+	local com = Instance.find(gm.constants.oCommand)
 	local data = actor:get_data()
 	
-	if tp.just_activated == 1 then
+	if tp.just_activated == 1 or dtp.just_activated == 1 or com.just_activated == 1 then
 		actor:buff_apply(buff, 30)
 	end
 	
@@ -69,10 +71,12 @@ end)
 --(below critglasses icon)
 roc:onPreDraw(function(actor)
 	local tp = Instance.find(gm.constants.oTeleporter)
+	local dtp = Instance.find(gm.constants.oTeleporterEpic)
+	local com = Instance.find(gm.constants.oCommand)
 	local data = actor:get_data()
 	local yOffset = gm.sprite_get_yoffset(actor.sprite_idle)
 	
-	if tp.just_activated == 1 then
+	if tp.just_activated == 1 or dtp.just_activated == 1 or com.just_activated == 1 then
 		actor:draw_sprite(sprite_buff, 0, actor.x, actor.y - yOffset)
 	end
 

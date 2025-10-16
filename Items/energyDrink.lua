@@ -26,7 +26,12 @@ buff:onStatRecalc(function(actor, stack)
 end)
 
 nrg:onStageStart(function(actor, stack)
-
-actor:buff_apply(buff, (60 * (25 + (5 * stack))))
+	--wait a bit
+	local function wait(actor, stack)
+		if actor:exists() then
+			actor:buff_apply(buff, (60 * (25 + (5 * stack))))
+		end
+	end
+	Alarm.create(wait, 90, actor, stack)
 
 end)

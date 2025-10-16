@@ -1,4 +1,4 @@
-local sprite_nanomachines = Resources.sprite_load(NAMESPACE, "nanomachines", path.combine(PATH, "Sprites/item/nanomachines.png"), 1, 17, 17)
+local sprite_nanomachines = Resources.sprite_load(NAMESPACE, "nanomachines", path.combine(PATH, "Sprites/item/nanomachines.png"), 1, 16, 15)
 
 local son = Item.new(NAMESPACE, "nanomachines")
 son:set_sprite(sprite_nanomachines)

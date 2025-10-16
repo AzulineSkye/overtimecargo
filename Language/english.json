@@ -12,7 +12,7 @@
 		"description": "Increases the following stats:\n\n<g>Max health</c> by <g>15% <c_stack>(+15% per stack).</c>\n<g>Health regeneration</c> by <g>3</c> <c_stack>(+3 per stack)</c> <g>HP/second.</c>\n<g>Armor</c> by <g>14 <c_stack>(+14 per stack).</c>\n<y>Damage</c> by <y>15%</c> <c_stack>(+15% per stack).</c>\n<y>Attack speed</c> by <y>25% <c_stack>(+25% per stack).</c>\n<y>Critical strike chance</c> by <y>15% <c_stack>(+15% per stack).</c>\n<b>Movement speed</c> by <b>28% <c_stack>(+28% per stack).</c>\n<b>Jump height</c> by <b>25% <c_stack>(+25% per stack).</c>",
 		"destination": "Lima,\nPeru,\nEarth",
 		"date": "11/16/2056",
-		"story": "It's PIZZA time! 30 years or it's FREE! FREE, I SAID! YES, FREE!",
+		"story": "..Where's my drink?\n\nMy DRINK? My DIET DR. CLEUS??? Don't TELL ME you forgot to ship my DRINK.\n\nHow am I supposed to eat this PIZZA without MY DRINK??? Haven't you once thought of the customer????\n\nYou call yourself a DELIVERY BOY??????? WELL I AIN'T BUYIN'.",
 		"priority": "<r>Standard</c>"
 		},
 
@@ -150,19 +150,19 @@
 		"name" : "Moonrock Whetstone",
 		"pickup" : "Slightly stronger Critical strikes. Gain increased Critical strike chance after activating the teleporter.",
 		"description" : "Increase <y>Critical strike damage by 5</c> <c_stack>(+3 per stack)</c>. During the teleporter event, gain <y>+12%</c> <c_stack>(+3% per stack)</c> <y>Critical strike chance.</c>",
-		"destination" : "your moms house",
-		"date": "69/420",
-		"story": "mr. thrix eats this",
-		"priority": "ill do it tomorrow"
+		"destination" : "Deimos 4566, \nEclipso, \nMoon",
+		"date": "02/13/2056",
+		"story": "Look, I'm sorry about the smithing business not panning out but I can't just be giving this away anymore. Our moon's only got so much- and that's not even considering the laws and tariffs coming into effect about moonrock exports. For now, this is the last I can give up for free, you're on your own from here.",
+		"priority": "<w>Standard</c>"
 		},
 	"energyDrink" : {
 		"name" : "Energy Drink",
 		"pickup" : "Gain a temporary speed and attack speed boost at the start of each stage.",
 		"description" : "Upon entering a stage, <y>increase both movement and attack speed by 25%</c> <c_stack>(+17% per stack)</c> for <b>30</c> <c_stack>(+5 per stack)</c> <b>seconds.</c>",
-		"destination" : "youer dads house",
-		"date": "64/920",
-		"story": "97-year-old CHEF unit still makes NRG the old-fashioned way.",
-		"priority": "Joe Biden"
+		"destination" : "Majora Minora, \nViolet Heights, \nVenus",
+		"date": "02/24/2056",
+		"story": "Alright man, here's all I can lend in terms of 'refreshments' for hoco. If anyone asks; I DID NOT send you this. Indulge at your own risk.. Rad Drinks wishes they made these changes to the formula though- would make them mad bank, regardless. Consider it an extra lil' gift for my regular. Cheers.",
+		"priority": "<w>Standard</c>"
 		},
 	"nanomachines" : {
 		"name" : "Nanomachines",
@@ -171,7 +171,7 @@
 		"destination" : "im fuckin INVINCIBLE wait wrong reference im fake",
 		"date": "4",
 		"story": "Standing Here with Real Ice",
-		"priority": "Political Joke Goes Here"
+		"priority": "<r>High Priority</c>"
 		},
 	"holyPauldron" : {
 		"name" : "Holy Pauldron",
@@ -179,17 +179,17 @@
 		"description" : "When killing an elite, gain <g>25%</c> <c_stack>(+15% per stack)</c> <g>of your maximum health as barrier</c>. <g>Barrier</c> <y>stops decaying for 5</c> <c_stack>(+3 per stack)</c> <y>seconds.</c>",
 		"destination" : "gods angles",
 		"date": "9/23/25",
-		"story": "Jesus answered; 'I am The Way, The Truth, and The Light. No one comes through The Father except through me.'",
-		"priority": "<r>$6 SRIMP SPECIL</c>"
+		"story": "Jesus answered; 'I am The Way, The Truth, and The Light. No one comes through The Father except through me.'\n\n\n\n\n\n\n\n\n<r>$6 SRIMP SPECIL</c>",
+		"priority": "<r>High Priority</c>"
 		},
 	"regenPlating" : {
 		"name" : "Regenerative Plating",
 		"pickup" : "The next three repaired drones have increased armor and healing.",
-		"description" : "For the next <b>3</c> <c_stack>(+3 per stack)</c> drones purchased</c>, <g>increases the drone's armor by 100 and Health regeneration by 3.6 HP/Second</c>.",
-		"destination" : "",
-		"date": "",
-		"story": "ummm. risk of rain.. RETURNS??? whats that ??? i only like my Risky Rain 2oos come back to me when you can speak Infinite Proc Co Efficient",
-		"priority": ""
+		"description" : "For the next <y>3</c> <c_stack>(+3 per stack)</c> <y>drones purchased</c>, <g>increases the drone's armor by 100 and Health regeneration by 3.6 HP/Second</c>.",
+		"destination" : "Halls of Engineering, \nPillars of Hope, \n Halcyone IV",
+		"date": "06/23/2770",
+		"story": "Alright, be sure to fill me in on the results. Of course make sure the drones are calibrated and that their software are backed up, I really don't know if the material could damage them internally. From my testing they seem to be more durable with no other issues.. And please don't test it on Bertha, yeah?",
+		"priority": "<g>Priority</c>"
 		},
 	"regenPlatingUsed" : {
 		"name" : "Diminished Scraps",
@@ -199,6 +199,15 @@
 		"date": "",
 		"story": "",
 		"priority": ""
+		},
+	"cannedFood" : {
+		"name" : "Canned Food",
+		"pickup" : "Activating an interactable drops chunks of poisoning meat.",
+		"description" : "Activating an interactable <y>drops 3</c> <c_stack>(+2 per stack)</c> <y>chunks of rotten meat that posion enemies for a total of 300%</c> <c_stack>(+150% per stack)</c> <y>damage.</c>",
+		"destination" : "03/23/2000",
+		"date": "Camp Bleeding Heron, \nIsla Santa Cruz, \nEarth",
+		"story": "M' personal thanks for orderin', not even speakin' as a rep I can't recommend it enuff. Our latest line of products are fillin', packed with protein, quick to prep, and don't take much storage. Perfect for a simple campin' trip or endurin' mother nature for nights on end.\n\nShouldn't expire til' 2009, too.",
+		"priority": "<w>Standard</c>"
 		}
 	},
 }

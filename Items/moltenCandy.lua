@@ -9,6 +9,7 @@ local candy = Item.new(NAMESPACE, "moltenCandy")
 candy:set_sprite(sprite_candy)
 candy:set_tier(Item.TIER.uncommon)
 candy:set_loot_tags(Item.LOOT_TAG.category_damage)
+candy:clear_callbacks()
 
 local candydust = Particle.new(NAMESPACE, "candyParticle")
 
@@ -26,6 +27,11 @@ candybuff.show_icon = true
 candybuff.icon_sprite = sprite_buff
 candybuff:clear_callbacks()
 
+local moltenblob = Object.new(NAMESPACE, "moltenCandyBlob")
+moltenblob:set_sprite(sprite_blob)
+
+moltenblob:clear_callbacks()
+
 candybuff:onApply(function(actor, stack)
 	actor:get_data().candyTick = 0
 end)
@@ -34,27 +40,14 @@ candybuff:onStatRecalc(function(actor, stack)
 	actor.pHmax = actor.pHmax * 0.4
 end)
 
-candybuff:onPostStep(function(actor, stack)
-	if gm._mod_net_isClient() then return end
-	
-	local data = actor:get_data()
-	data.candyTick = data.candyTick + 1
-	
-	if data.candyTick >= 25 then
-		local dmg = data.applier.damage * data.applier:item_stack_count(candy)
-		actor:damage_inflict(actor, dmg, 0, data.applier, actor.x, actor.y, dmg, data.applier.team, Color.from_rgb(188, 67, 112))
-		data.candyTick = 0
-	end
-end)
-
-local moltenblob = Object.new(NAMESPACE, "moltenCandyBlob")
-moltenblob:set_sprite(sprite_blob)
-
-moltenblob:clear_callbacks()
-
 moltenblob:onCreate(function(self)
-	self:get_data().blob = true
-	self:get_data().grounded = false
+	local data = self:get_data()
+	if not data.blob then
+		data.blob = true
+	end
+	if data.grounded == nil then
+		data.grounded = 0
+	end
 end)
 
 moltenblob:onStep(function(self)
@@ -73,10 +66,13 @@ moltenblob:onStep(function(self)
 			data.blob = false
 		end
 	else
-		if data.grounded then
+		if data.grounded == 1 then
 			local buffed = 0
 			for _, victim in ipairs(self:get_collisions(gm.constants.pActor)) do
 				if victim.team ~= data.parent.team and victim:get_buff_time(victim, candybuff) <= 1 then
+					if not victim:get_data().pool_damage then
+						victim:get_data().pool_damage = data.parent.damage
+					end
 					victim:buff_apply(candybuff, 30)
 					victim:get_data().applier = data.parent
 					buffed = buffed + 1
@@ -103,12 +99,28 @@ moltenblob:onStep(function(self)
 			gm.sound_play_networked(sound_explode, 1, 1, self.x, self.y)
 			local explode = GM.instance_create(self.x, self.y, gm.constants.oEfExplosion)
 			explode.sprite_index = sprite_explode
-			data.grounded = true
+			data.grounded = 1
 		end
 	end
 end)
 
-candy:clear_callbacks()
+candybuff:onPostStep(function(actor, stack)
+	if gm._mod_net_isClient() then return end
+	
+	local data = actor:get_data()
+	data.candyTick = data.candyTick - 1
+	
+	if data.candyTick <= 0 then
+		local dmg = data.pool_damage * data.applier:item_stack_count(candy)
+		actor:damage_inflict(actor, dmg, 0, data.applier, actor.x, actor.y, dmg, data.applier.team, Color.from_rgb(188, 67, 112))
+		data.candyTick = 25
+	end
+end)
+
+candybuff:onRemove(function(actor, stack)
+	actor:get_data().pool_damage = nil
+end)
+
 candy:onHitProc(function(actor, victim, stack, hit_info)
 	if (math.random() <= 0.05 or hit_info.attack_info:get_attack_flag(Attack_Info.ATTACK_FLAG.force_proc)) and (#Instance.find_all(moltenblob)) < 21 then -- wont spawn if 21 puddles max already exist, another performance cope
 		for i = 0, 2, 1 do
